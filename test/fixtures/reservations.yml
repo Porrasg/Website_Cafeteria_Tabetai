@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  party: MyString
+  date: 2023-11-13 08:35:58
+  hour: 2023-11-13 08:35:58
+
+two:
+  party: MyString
+  date: 2023-11-13 08:35:58
+  hour: 2023-11-13 08:35:58

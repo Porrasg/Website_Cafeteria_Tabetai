@@ -1,0 +1,40 @@
+.personal{
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+.form-client {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+.label-client {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.input-client {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.enviar {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.enviar:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,95 @@
+.buttons {
+    position: absolute;
+    bottom: 250px; /* Ajustado para que no esté tan cerca del borde inferior */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.tresbuttons{
+    display: flex;
+    gap: 100px;
+    flex-direction: row;
+}
+
+.info-image {
+    width: 100%;
+    padding: 0;
+}
+
+.info-content {
+    position: relative;
+    text-align: center;
+}
+
+.button-inicio {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 15px;
+    width: 300px; /* Puedes ajustar el valor según tus necesidades */
+    padding: 10px;
+}
+
+.floating-button {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+/* Estilo base del botón */
+.cta {
+    display: inline-block;
+    padding: 6px 20px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #000000; 
+    color: #000000;
+    background-color: rgba(67, 70, 72, 0.5); 
+    transition: background-color 0.3s, color 0.3s; 
+    border-radius: 22px;
+    margin-bottom: 10%;
+}
+.cta:hover {
+    background-color: rgb(41, 45, 47); 
+    color: #ffffff; 
+    box-shadow: 0 0 10px rgba(32, 35, 37, 0.8); 
+}
+
+
+.floating-button,
+.button-inicio {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 767px) {
+    .info-container{
+        background-image: url("../../img/responsiveimg.png");
+        background-size: cover;
+        background-position: 40%;
+        
+    }
+    .buttons {
+        position: relative;
+        /* position: static;
+        transform: none; */
+        transform: translate(-50%, 63%);
+    }
+    
+
+    .button-inicio,
+    .floating-button {
+        width: 99%;
+    }
+
+    .tresbuttons{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info-image{
+        display: none;
+    }
+    
+}
+
+

@@ -1,0 +1,94 @@
+/* Navbar.css */
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #f0f0f0;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    color: black;
+    font-size: 115%;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin-right: 20px;
+    display: inline-block;
+}
+
+.navbar a:hover {
+    background-color: lightblue;
+    color: black;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f0f0f0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Botón de menú */
+.menu-button {
+    display: none; /* Oculta el botón de menú en pantallas grandes */
+    font-size: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* Mostrar el botón de menú solo en pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu-button {
+        display: block;
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        /* position: absolute; */
+        top: 60px; /* Ajusta según sea necesario para evitar solapamiento con la barra de navegación */
+        width: 100%;
+        background-color: #f0f0f0;
+    }
+
+    .navbar-menu.open {
+        display: flex;
+    }
+
+
+    .pasteleria::after {
+        content: '\25BC';
+        color: lightblue;
+    }
+}
+
+/* Restaurar estilos originales en pantallas grandes */
+@media (min-width: 769px) {
+    .menu-button {
+        display: none;
+    }
+
+    .navbar-menu {
+        display: flex !important; /* Usa !important para anular estilos anteriores en pantallas grandes si es necesario */
+        position: static;
+        width: auto;
+        box-shadow: none;
+    }
+    .pasteleria::after {
+        content: '\25BC';
+        color: lightblue;
+    }
+}
