@@ -1,4 +1,4 @@
-h2 {
+.mar {
     display: inline-block;
     position: relative;
     color: #ffffff;
@@ -22,7 +22,7 @@ h2 {
     transform: rotateX(90deg);
     
     }
-    h2:hover {
+    .mar:hover {
     transform-origin: center bottom;
     transform: rotateX(-90deg) translateY(100%);
     color: aliceblue;
@@ -60,29 +60,8 @@ h2 {
         transform-origin: center bottom;
         transform: rotateX(-90deg) translateY(100%);
         }
-     
 
-
-
-
-
-
- 
-
-  h1 {
-    right: 1rem;
-    bottom: 1rem;
-    opacity: 0.5;
-    margin: 0;
-  }
-
-  p {
-    margin: 0;
-  }
-
-
-
-  figure {
+    .figu {
     width: 300px;
     height: 500px;
     aspect-ratio: 8 / 5;

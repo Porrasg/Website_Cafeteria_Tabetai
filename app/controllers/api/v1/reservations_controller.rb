@@ -20,6 +20,7 @@ class Api::V1::ReservationsController <ApplicationController
         end
     end
 
+
     def destroy
         @reservation.destroy
         head :no_content

@@ -35,23 +35,23 @@ const Login = ({setCurrUser}) =>{
         e.target.reset()
     }
     
-    useEffect(() => {         
-        const token = localStorage.getItem("token"); // Retrieve the token from localStorage
-        if (token) {             
-            const decoded = jwtDecode(token);             
-            const userId = decoded.sub;             
-            fetch("http://localhost:3001/login", {                 
-                headers: {                     
-                    "content-type": "application/json",                     
-                    "authorization": localStorage.getItem("token"),                 
-                }                 
-            }).then(response => response.json()).then(data => {                     
-                setCurrUser(data);                 
-            }).catch(error => {                     
-                console.error('Error:', error);                 
-            });         
-        }     
-    }, []);
+    // useEffect(() => {         
+    //     const token = localStorage.getItem("token"); // Retrieve the token from localStorage
+    //     if (token) {             
+    //         const decoded = jwtDecode(token);             
+    //         const userId = decoded.sub;             
+    //         fetch("http://localhost:3001/login", {                 
+    //             headers: {                     
+    //                 "content-type": "application/json",                     
+    //                 "authorization": localStorage.getItem("token"),                 
+    //             }                 
+    //         }).then(response => response.json()).then(data => {                     
+    //             setCurrUser(data);                 
+    //         }).catch(error => {                     
+    //             console.error('Error:', error);                 
+    //         });         
+    //     }     
+    // }, []);
 
     return(
         <div className="container_register">

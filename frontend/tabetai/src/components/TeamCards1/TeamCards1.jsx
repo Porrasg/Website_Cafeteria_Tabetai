@@ -7,12 +7,12 @@ function TeamCards1() {
 
       <div>
         <figure>
-        <h2>Marcelo Maltés</h2>
+        <h2 className='mar'>Marcelo Maltés</h2>
         <img className='Foto' src="https://assets.codepen.io/605876/person.png" alt="holla"/></figure>
       </div>
 
       <div>
-        <figure>
+        <figure className='figu'>
         <h2 className='kianny'>Kianny Porras</h2>
         <img className='Foto' src="https://assets.codepen.io/605876/person.png" alt="holla"/></figure>
       </div>
