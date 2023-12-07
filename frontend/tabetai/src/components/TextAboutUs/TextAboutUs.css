@@ -1,0 +1,58 @@
+/* Estilo del contenedor principal para pantallas de laptop */
+.container-text-photo {
+    display: flex;
+    gap: 40px; /* Espacio entre las columnas, aumentado para mayor separación */
+    padding: 40px; /* Padding para separar del borde exterior, aumentado */
+    max-width: 1600px; /* Ancho máximo del contenedor, ajustado para una pantalla de laptop más grande */
+    width: 100%; /* Garantiza que el contenedor se ajuste al ancho de la pantalla */
+  }
+  
+  /* Estilo para la columna izquierda (span) */
+  .column-1 {
+    flex: 1; /* La columna izquierda toma el 50% del ancho del contenedor */
+    padding: 30px; /* Padding interno para separar del contenido, aumentado */
+  }
+  
+  /* Estilo para el span dentro de la columna izquierda */
+  .left-text {
+    display: block; /* Garantiza que el texto ocupe todo el ancho disponible */
+    max-width: 500px; /* Ancho máximo del cuadro de texto, aumentado */
+    line-height: 1.6; /* Espaciado entre líneas, aumentado */
+    text-align: center; /* Centrar el texto dentro del cuadro */
+    font-size: 18px; /* Tamaño de letra, aumentado */
+  }
+  
+  /* Estilo para la columna derecha (foto) */
+  .column-2 {
+    flex: 1; /* La columna derecha también toma el 50% del ancho del contenedor */
+    padding: 30px; /* Padding interno para separar del contenido, aumentado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Estilo para la foto dentro de la columna derecha */
+  .right-photo {
+    max-width: 100%; /* La imagen no supera el ancho de su contenedor */
+    height: auto; /* La altura se ajusta automáticamente para mantener la proporción original */
+    max-height: 400px; /* Altura máxima de la imagen, aumentada */
+    border-radius: 20px; /* Bordes redondeados para un estilo más curvado */
+  }
+  
+  /* Media query para pantallas más pequeñas (móviles) */
+  @media screen and (max-width: 768px) {
+    .container-text-photo {
+      flex-direction: column; /* Cambia la dirección a columna para pantallas pequeñas */
+      padding: 20px; /* Ajusta el padding para pantallas más pequeñas */
+      gap: 20px; /* Ajusta el espacio entre columnas para pantallas más pequeñas */
+    }
+  
+    .left-text {
+      font-size: 16px; /* Ajusta el tamaño de la letra para pantallas más pequeñas */
+    }
+  
+    .right-photo {
+      max-height: 300px; /* Ajusta la altura máxima de la imagen para pantallas más pequeñas */
+    }
+  }
+  
