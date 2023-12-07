@@ -1,7 +1,8 @@
-import { useRef } from "react"
+import { useRef, useEffect } from "react"
 import './Login.css'
+import { jwtDecode } from "jwt-decode";
 
-const Login = ({setCurrUser, setShow}) =>{
+const Login = ({setCurrUser}) =>{
     const formRef=useRef()
     const login=async (userInfo, setCurrUser)=>{
         const url="http://localhost:3001/login"
@@ -33,10 +34,25 @@ const Login = ({setCurrUser, setShow}) =>{
         login(userInfo, setCurrUser)
         e.target.reset()
     }
-    const handleClick=e=>{
-        e.preventDefault()
-        setShow(false)
-    }
+    
+    useEffect(() => {         
+        const token = localStorage.getItem("token"); // Retrieve the token from localStorage
+        if (token) {             
+            const decoded = jwtDecode(token);             
+            const userId = decoded.sub;             
+            fetch("http://localhost:3001/login", {                 
+                headers: {                     
+                    "content-type": "application/json",                     
+                    "authorization": localStorage.getItem("token"),                 
+                }                 
+            }).then(response => response.json()).then(data => {                     
+                setCurrUser(data);                 
+            }).catch(error => {                     
+                console.error('Error:', error);                 
+            });         
+        }     
+    }, []);
+
     return(
         <div className="container_register">
             <div className="registration">
