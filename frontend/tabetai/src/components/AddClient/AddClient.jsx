@@ -17,7 +17,7 @@ const AddClient = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ full_name, email, phone_number }),
+        body: JSON.stringify({client:{full_name, email, phone_number} }),
       });
 
       console.log('aaaaaaaaaaaa', response)
