@@ -9,10 +9,13 @@ class Api::V1::ClientsController <ApplicationController
   def new
     @client = Client.new
   end
-    
+
   def create
-    @client = Client.new(client_params)
     
+    byebug
+    
+    @client = Client.new(client_params)
+
     if @client.save
       render json: @client, status: :created
     else
@@ -37,6 +40,7 @@ class Api::V1::ClientsController <ApplicationController
         render json: @client.errors, status: :unprocessable_entity
     end
   end
+
 #---------------------------------------------------------------------------------#
 
   private
