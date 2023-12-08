@@ -1,84 +1,84 @@
 .mar {
-    display: inline-block;
-    position: relative;
-    color: #ffffff;
-    text-decoration: none;
-    transition: all .5s ease;
-    transform-style: preserve-3d;
-    font-weight: 400;
-    margin: 2rem 0 0.25rem 0;
-    font-size: 40px;
-    margin-left: 20px;
-    font-family:fantasy;
-    }
-    h2:after {
-    content: "CEO";
-    position: absolute;
-    top: -100%;
-    left: 0px;
-    width: 100%;
-    background:#9bc0ce;
-    transform-origin: left bottom;
-    transform: rotateX(90deg);
-    
-    }
-    .mar:hover {
-    transform-origin: center bottom;
-    transform: rotateX(-90deg) translateY(100%);
-    color: aliceblue;
-    }
+  display: inline-block;
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all .5s ease;
+  transform-style: preserve-3d;
+  font-weight: 400;
+  margin: 2rem 0 0.25rem 0;
+  font-size: 40px;
+  margin-left: 20px;
+  font-family:fantasy;
+}
+
+.mar:after {
+  content: "CEO";
+  position: absolute;
+  top: -100%;
+  left: 0px;
+  width: 100%;
+  background:#9bc0ce;
+  transform-origin: left bottom;
+  transform: rotateX(90deg);
+}
+
+.mar:hover {
+  transform-origin: center bottom;
+  transform: rotateX(-90deg) translateY(100%);
+  color: aliceblue;
+}
+
+.kianny {
+  display: inline-block;
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all .5s ease;
+  transform-style: preserve-3d;
+  font-weight: 400;
+  margin: 2rem 0 0.25rem 0;
+  font-size: 40px;
+  margin-left: 32px;
+}
+
+.kianny:after {
+  content: "Mesera";
+  position: absolute;
+  top: -100%;
+  left: 0px;
+  width: 100%;
+  background:#9bc0ce;
+  transform-origin: left bottom;
+  transform: rotateX(90deg);
+}
+
+.kianny:hover {
+  transform-origin: center bottom;
+  transform: rotateX(-90deg) translateY(100%);
+}
+
+.figu {
+  width: 300px;
+  height: 500px;
+  background:#9bc0ce;
+  border-width: 2px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+}
 
 
 
+.Foto {
+  position: absolute;
+  margin-left: -60%;
+  top: 22%;
+  width: 65%;
+  transition: transform 0.2s;
+}
 
-
-
-    .kianny {
-        display: inline-block;
-        position: relative;
-        color: #ffffff;
-        text-decoration: none;
-        transition: all .5s ease;
-        transform-style: preserve-3d;
-        font-weight: 400;
-        margin: 2rem 0 0.25rem 0;
-        font-size: 40px;
-        margin-left: 32px;
-        }
-        .kianny:after {
-        content: "Mesera";
-        position: absolute;
-        top: -100%;
-        left: 0px;
-        width: 100%;
-        background:#9bc0ce;
-        transform-origin: left bottom;
-        transform: rotateX(90deg);
-        
-        }
-        .kianny:hover {
-        transform-origin: center bottom;
-        transform: rotateX(-90deg) translateY(100%);
-        }
-
-    .figu {
-    width: 300px;
-    height: 500px;
-    aspect-ratio: 8 / 5;
-    background:#9bc0ce;
-    border-width: 2px;
-    margin-left: 40%;
-    position: relative;
-    overflow: hidden;
-    border-radius: 1.5rem;
-  }
-
-
-
-  .Foto {
-    position: absolute;
-    margin-left: -60%;
-    top: 22%;
-    width: 65%;
-    transition: transform 0.2s;
-  }
+.conta{
+  justify-content: center;
+  display: grid;
+}

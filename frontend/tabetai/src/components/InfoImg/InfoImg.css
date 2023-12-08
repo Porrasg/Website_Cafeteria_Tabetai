@@ -1,10 +1,15 @@
+
 .buttons {
     position: absolute;
     bottom: 250px; /* Ajustado para que no esté tan cerca del borde inferior */
     left: 50%;
     transform: translateX(-50%);
+    
 }
 
+.icons{
+    font-size: 160%;
+}
 
 .tresbuttons{
     display: flex;
@@ -29,6 +34,8 @@
     margin-bottom: 15px;
     width: 300px; /* Puedes ajustar el valor según tus necesidades */
     padding: 10px;
+    color: #ffffff;
+    font-size: 120%;
 }
 
 .floating-button {
@@ -66,8 +73,10 @@
         background-image: url("../../img/responsiveimg.png");
         background-size: cover;
         background-position: 40%;
-        
+        padding-top: 25%;
+        padding-bottom: 29%;
     }
+
     .buttons {
         position: relative;
         /* position: static;
@@ -82,14 +91,15 @@
     }
 
     .tresbuttons{
-        display: flex;
-        flex-direction: column;
+        gap: 0%;
+        padding: 15px;
+        justify-content: center;
+        display: grid;
     }
 
     .info-image{
         display: none;
     }
-    
 }
 
 

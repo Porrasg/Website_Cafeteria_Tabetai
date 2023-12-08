@@ -1,9 +1,12 @@
 // Info_img.jsx
 
 import React from 'react';
-import './Info_img.css';
+import './InfoImg.css';
 import imagenLogo from '../../img/Untitled.png';
 import { Link } from 'react-router-dom';
+import { BiAlarm } from "react-icons/bi";
+import { LiaMapMarkedAltSolid } from "react-icons/lia";
+import { BiFoodMenu } from "react-icons/bi";
 
 const InfoImg = () => {
     return (
@@ -20,11 +23,8 @@ const InfoImg = () => {
                     <div className='tresbuttons' >
                         <button className='button-inicio'>
                             <div className='schedule'>
-                                <span>
-                                    <lord-icon className="icon"
-                                        src="https://cdn.lordicon.com/mwikjdwh.json"
-                                        trigger="hover">
-                                    </lord-icon>
+                                <span className='icons'>
+                                    <BiAlarm />
                                 </span>
                                 <br />
                                 <span>Horario</span>
@@ -34,11 +34,8 @@ const InfoImg = () => {
 
                         <button className='button-inicio'>
                             <div className='menu'>
-                                <span>
-                                    <lord-icon className="icon"
-                                        src="https://cdn.lordicon.com/zyzoecaw.json"
-                                        trigger="hover">
-                                    </lord-icon>
+                                <span className='icons'>
+                                    <BiFoodMenu />
                                 </span>
                                 <br />
                                 <span>Menú</span>
@@ -48,15 +45,12 @@ const InfoImg = () => {
 
                         <button className='button-inicio'>
                             <div className='location'>
-                                <span>
-                                    <lord-icon className="icon"
-                                        src="https://cdn.lordicon.com/cnpvyndp.json"
-                                        trigger="hover">
-                                    </lord-icon>
+                                <span className='icons'>
+                                    <LiaMapMarkedAltSolid />
                                 </span>
                                 <br />
                                 <span>Ubicación</span>
-                                <p>¿Ya sabes dónde estamos ubicados?</p>
+                                <p>¿Sabes dónde nos ubicados?</p>
                             </div>
                         </button>
                     </div>

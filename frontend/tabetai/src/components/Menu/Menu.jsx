@@ -12,7 +12,7 @@ function Menu() {
         </div>
 
         <div className='img_container'>
-        <img className='' src={Menu1} alt="" />
+        <img className='imgmenu' src={Menu1} alt="" />
         </div>
         <br />
 

@@ -13,3 +13,10 @@
     height: auto;
 
 }
+
+@media (max-width: 767px) {
+    .imgmenu{
+        background-image: url("../../img/Menu1.png");
+        width: 85%;
+    }
+}

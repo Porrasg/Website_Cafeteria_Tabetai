@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, Link } from 'react-router-dom';
 import './AddClient.css';
 
 const AddClient = () => {
@@ -30,7 +30,6 @@ const AddClient = () => {
 
       localStorage.setItem("ReservaId",data.id)
 
- 
 
       // Establecer el estado para redirigir a /reservar
       setRedirectToReservar(true);
@@ -64,7 +63,11 @@ const AddClient = () => {
           <input className='input-client' type="tel" value={phone_number} onChange={(e) => setPhoneNumber(e.target.value)} />
         </label>
 
-        <button className='enviar' type="submit">Siguiente</button>
+        <div className='sigback'>
+          <Link to="/" className='enviar atras'>Anterior</Link>
+          <button className='enviar' type="submit">Siguiente</button>
+        </div>
+        
       </form>
     </>
   );

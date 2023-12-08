@@ -1,8 +1,8 @@
 import React from 'react'
 import sobreNosotros from '../../img/SOBRENOSOTROSS.png'
-import './AboutUs_Img.css'
+import './AboutUsImg.css'
 
-function AboutUs_Img() {
+function AboutUsImg() {
   return (
     
     <div>
@@ -11,4 +11,4 @@ function AboutUs_Img() {
   )
 }
 
-export default AboutUs_Img
+export default AboutUsImg

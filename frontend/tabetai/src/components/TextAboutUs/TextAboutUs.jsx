@@ -8,8 +8,7 @@ function TextAboutUs() {
 
         <div className='column-1'>
             <span className='left-text'> 
-          
-¡Bienvenidos a Tabetai, el rincón creativo de Puntarenas! Somos una pastelería especializada en pasteles decorados con historias únicas. Disfruta de nuestro café excepcional y bocadillos finos que complementan perfectamente nuestras delicias. En Tabetai, celebramos la comunidad puntarenense y cada visita es una oportunidad para compartir momentos especiales. Únete a nosotros para descubrir la magia de Tabetai, donde la creatividad y el sabor se encuentran en cada bocado y sorbo. ¡Te esperamos para vivir una experiencia única!
+              ¡Bienvenidos a Tabetai, el rincón creativo de Puntarenas! Somos una pastelería especializada en pasteles decorados con historias únicas. Disfruta de nuestro café excepcional y bocadillos finos que complementan perfectamente nuestras delicias. En Tabetai, celebramos la comunidad puntarenense y cada visita es una oportunidad para compartir momentos especiales. Únete a nosotros para descubrir la magia de Tabetai, donde la creatividad y el sabor se encuentran en cada bocado y sorbo. ¡Te esperamos para vivir una experiencia única!
             </span>
         </div>
 

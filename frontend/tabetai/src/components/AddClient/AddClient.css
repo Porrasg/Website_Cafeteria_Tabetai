@@ -26,7 +26,9 @@
 }
 
 .enviar {
-    padding: 10px 20px;
+    padding: 3%;
+    padding-left: 10%;
+    padding-right: 10%;
     margin-top: 10px;
     background-color: #007bff;
     color: white;
@@ -35,6 +37,20 @@
     cursor: pointer;
 }
 
+
+.atras{
+    padding-left: 12%;
+    padding-right: 12%;
+    text-decoration: none;
+}
+
 .enviar:hover {
     background-color: #0056b3;
+}
+
+.sigback{
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+
 }

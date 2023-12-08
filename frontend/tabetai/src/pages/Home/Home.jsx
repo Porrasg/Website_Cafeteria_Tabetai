@@ -1,11 +1,12 @@
 import React from 'react'
 // import './Home.css'
 import Navbar from '../../components/Navbar/Navbar'
-import Info_img from '../../components/Info_img/Info_img'
+import InfoImg from '../../components/InfoImg/InfoImg'
 import Slogan from '../../components/Slogan/Slogan'
-import GoogleMaps from '../../components/GoogleMaps/GoogleMaps'
+// import GoogleMaps from '../../components/GoogleMaps/GoogleMaps'
 import Schelude from '../../components/Schedule/Schelude'
 import Menu from '../../components/Menu/Menu'
+import Footer from '../../components/Footer/Footer'
 
 function Home() {
     return (
@@ -15,7 +16,7 @@ function Home() {
             </header>       
 
             <section>
-                <Info_img></Info_img>
+                <InfoImg></InfoImg>
             </section>
             
             <section>
@@ -32,6 +33,10 @@ function Home() {
 
             <section>
             <Schelude></Schelude>
+            </section>
+
+            <section>
+                <Footer></Footer>
             </section>
         </div>
     )
