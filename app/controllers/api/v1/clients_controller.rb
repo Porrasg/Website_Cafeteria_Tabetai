@@ -12,8 +12,6 @@ class Api::V1::ClientsController <ApplicationController
 
   def create
     
-    byebug
-    
     @client = Client.new(client_params)
 
     if @client.save
