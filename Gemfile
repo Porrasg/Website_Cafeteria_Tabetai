@@ -54,6 +54,8 @@ gem 'byebug'
 gem 'cancancan'
 gem 'kaminari'
 
+gem 'resque'
+
 
 gem 'rack-cors'
 gem 'devise-jwt'

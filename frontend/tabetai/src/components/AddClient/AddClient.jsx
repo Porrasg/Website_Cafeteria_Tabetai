@@ -17,8 +17,10 @@ const AddClient = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ full_name, email, phone_number }),
+        body: JSON.stringify({client:{full_name, email, phone_number} }),
       });
+
+      console.log('aaaaaaaaaaaa', response)
 
       if (!response.ok) {
         throw new Error('Error: ' + response.statusText);
@@ -29,7 +31,6 @@ const AddClient = () => {
       console.log(data.id)
 
       localStorage.setItem("ReservaId",data.id)
-
 
       // Establecer el estado para redirigir a /reservar
       setRedirectToReservar(true);
