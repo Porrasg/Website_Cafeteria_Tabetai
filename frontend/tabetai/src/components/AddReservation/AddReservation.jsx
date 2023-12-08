@@ -20,7 +20,7 @@ const AddReservation = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ date, hour, party, client_id }),
+        body: JSON.stringify({reservation: { date, hour, party, client_id} }),
       });
 
 
