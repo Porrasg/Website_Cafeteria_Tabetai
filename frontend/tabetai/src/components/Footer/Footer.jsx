@@ -5,7 +5,7 @@ function Footer() {
   return (
     <div>
         <div className="copyright">
-            <p className='text_footer'>Copyright @ Marcelo Maltés & Kianny Porras. Made with <i class="fa-regular fa-heart"></i> by Ourself</p>
+            <p className='text_footer'>Copyright @ Marcelo Maltés & Kianny Porras. Made with <i className="fa-regular fa-heart"></i> by Ourself</p>
         </div>
 </div>
 

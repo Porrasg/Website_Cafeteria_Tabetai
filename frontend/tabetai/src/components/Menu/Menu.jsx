@@ -1,23 +1,22 @@
-import React from 'react'
-import './Menu.css'
-import Menu1 from '../../img/Menu1.png'
+import React from 'react';
+import './Menu.css';
+import Menuu from '../../img/MinimalistMenu.png';
 
-function Menu() {
+function Menu({ menuRef }) {
   return (
     <div>
         <div className='tittle_container'>
-        <h1>Nuestro Menú</h1>
-        <h2>Elige la mejor opción para tu paladar</h2>
-        <br />
+          <h1>Nuestro Menú</h1>
+          <h3>Elige la mejor opción para tu paladar</h3>
+          <br />
         </div>
 
         <div className='img_container'>
-        <img className='imgmenu' src={Menu1} alt="" />
+          <img className='imgmenu' src={Menuu} alt="menu" />
         </div>
         <br />
-
     </div>
-  )
+  );
 }
 
-export default Menu
+export default Menu;

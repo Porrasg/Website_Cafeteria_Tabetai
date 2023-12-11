@@ -11,12 +11,15 @@
     justify-content: center;
     width: 100%;
     height: auto;
+}
 
+.imgmenu{
+    width: 50%;
 }
 
 @media (max-width: 767px) {
     .imgmenu{
-        background-image: url("../../img/Menu1.png");
+        background-image: url("../../img/MinimalistMenu.png");
         width: 85%;
     }
 }

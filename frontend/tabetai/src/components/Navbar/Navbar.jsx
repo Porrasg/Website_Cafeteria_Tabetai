@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 function Navbar() {
@@ -17,18 +18,18 @@ function Navbar() {
                 <ul className={`navbar-menu ${isMenuOpen ? 'open' : ''}`}>
                     <li className="navbar-item dropdown">
                         <div>
-                            <a href="#" className="navbar-link pasteleria" id='nav-cat'>Pastelería</a>
+                            <Link to="#" className="pasteleria" id='nav-cat'>Pastelería</Link>
                         </div>
                         <ul className={`dropdown-menu ${isMenuOpen ? 'open' : ''}`}>
-                            <li><a href="#" className="navbar-link">Horario</a></li>
-                            <li><a href="#" className="navbar-link">Ubicaciones</a></li>
-                            <li><a href="#" className="navbar-link">Menú</a></li>
+                            <li><Link to="/horario" className="navbar-link">Horario</Link></li>
+                            <li><Link to="/ubicacion" className="navbar-link">Ubicaciones</Link></li>
+                            <li><Link to="/menu" className="navbar-link">Menú</Link></li>
                         </ul>
                     </li>
-                    <li><a href="/cliente_reservar" id='nav-cat'>Reservar</a></li>
-                    <li><a href="/catalogo" id='nav-cat'>Catálogo</a></li>
-                    <li><a href="/nosotros" id='nav-cat'>Nosotros</a></li>
-                    <li><a href="/login" id='nav-cat'>Login</a></li>
+                    <li><Link to="/cliente_reservar" id='nav-cat'>Reservar</Link></li>
+                    <li><Link to="/catalogo" id='nav-cat'>Catálogo</Link></li>
+                    <li><Link to="/nosotros" id='nav-cat'>Nosotros</Link></li>
+                    <li><Link to="/login" id='nav-cat'>Login</Link></li>
                 </ul>
             </nav>
         </div>
