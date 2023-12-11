@@ -14,6 +14,8 @@ import Clients_Views from './components/Admins/Clients_views/Clients_views';
 import Admins_views from './components/Admins/Admins_views/Admins_views';
 import Tables from './components/Admins/Tables/Tables';
 import Form_admin from './components/Admins/Form_admin/Form_admin';
+import Menu from './components/Menu/Menu';
+import Schelude from './components/Schedule/Schelude';
 
 function App() {
   const router = createBrowserRouter([
@@ -60,6 +62,18 @@ function App() {
     {
       path: '/admin_mesas',
       element: <Tables></Tables>
+    },
+    {
+      path: '/horario',
+      element: <Schelude></Schelude>
+    },
+    {
+      path: '/ubicacion',
+      element: <Schelude></Schelude>
+    },
+    {
+      path: '/menu',
+      element: <Menu></Menu>
     },
 
 

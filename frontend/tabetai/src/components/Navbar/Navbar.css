@@ -33,10 +33,15 @@
     position: absolute;
     background-color: #f0f0f0;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    
 }
 
 .dropdown:hover .dropdown-menu {
     display: block;
+}
+
+.navbar-link{
+    margin-left: 6%;
 }
 
 /* Botón de menú */

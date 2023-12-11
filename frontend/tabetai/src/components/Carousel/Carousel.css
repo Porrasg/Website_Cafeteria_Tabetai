@@ -1,0 +1,9 @@
+.allCar{
+    padding-bottom: 5%;
+}
+
+.imagenes{
+    width: 100%; /* Tamaño deseado */
+    overflow: hidden; /* Para recortar las imágenes que exceden el tamaño */
+    height: 20%;
+}

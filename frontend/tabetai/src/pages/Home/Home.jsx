@@ -7,6 +7,7 @@ import Slogan from '../../components/Slogan/Slogan'
 import Schelude from '../../components/Schedule/Schelude'
 import Menu from '../../components/Menu/Menu'
 import Footer from '../../components/Footer/Footer'
+import Carousel from '../../components/Carousel/Carousel'
 
 function Home() {
     return (
@@ -21,6 +22,10 @@ function Home() {
             
             <section>
                 <Slogan></Slogan>
+            </section>
+
+            <section>
+                <Carousel></Carousel>
             </section>
 
             {/* <section>
