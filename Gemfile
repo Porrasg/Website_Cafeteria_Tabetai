@@ -55,6 +55,7 @@ gem 'cancancan'
 gem 'kaminari'
 
 gem 'resque'
+gem 'resque-programador'
 
 
 gem 'rack-cors'
