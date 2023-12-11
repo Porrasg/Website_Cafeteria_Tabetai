@@ -1,0 +1,18 @@
+# config/resque_schedule.yml
+# your_scheduled_job:
+#   cron: "0 0 * * *" # Ejecuta cada día a medianoche
+#   class: YourScheduledJob # Reemplaza con el nombre de tu clase de trabajo
+#   args: # Argumentos que pasas al trabajo, si es necesario
+#     - arg1
+#     - arg2
+
+# -------------------------------------------------------------------------------#
+
+delete_reservation_job:
+  cron: '0 */2 * * *'  # Ejecutar cada 2 horas (ajusta según sea necesario)
+  class: DeleteReservationJob
+
+cleanup_rest_tables_job: 
+  cron: '0 */2 * * *'
+  class: CleanupRestTablesJob
+
