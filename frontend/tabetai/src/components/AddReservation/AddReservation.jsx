@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from 'react';
 import './AddReservation.css';
-import { Navigate } from 'react-router-dom';  // Agrega esta línea
+import { Navigate, Link } from 'react-router-dom';  // Agrega esta línea
 
 const AddReservation = () => {
   const [date, setFecha] = useState('');
@@ -124,10 +124,11 @@ const AddReservation = () => {
           <input className='input-client' type="text" value={client_id} onChange={(e) => setClientID(e.target.value)} />
         </label>
         display none
-
-        <button className='registrar' type="submit">
-          Reservar
-        </button>
+        
+        <div className='resback'>
+          <Link to="/cliente_reservar" className='registrar atras'>Anterior</Link>
+          <button className='registrar' type="submit">Reservar</button>
+          </div>
       </form>
     </>
   );

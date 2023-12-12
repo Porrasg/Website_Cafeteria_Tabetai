@@ -1,7 +1,7 @@
 class Reservation < ApplicationRecord
     #---Relación que tienen estre tablas---#
     belongs_to :client
-    has_many :rest_tables
+    has_many :rest_tables, dependent: :destroy
 
     # validaciónes de los metodos
 
