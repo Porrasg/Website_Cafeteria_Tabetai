@@ -1,9 +1,27 @@
 .allCar{
-    padding-bottom: 5%;
+    max-width: 100%;
 }
 
-.imagenes{
-    width: 100%; /* Tamaño deseado */
-    overflow: hidden; /* Para recortar las imágenes que exceden el tamaño */
-    height: 20%;
+.carousel-container {
+    max-width: 70%; /* Puedes ajustar el tamaño según tus necesidades */
+    margin: auto; /* Centra el carousel horizontalmente */
+}
+
+
+.imagenes {
+    width: 100%;
+    max-height: 550px; /* Establece la altura máxima según tus necesidades */
+    object-fit: cover; /* Controla cómo se ajusta la imagen manteniendo su relación de aspecto */
+}
+
+
+@media (max-width: 767px) {
+    .imagenes {
+        max-height: 211px; /* Establece la altura máxima según tus necesidades */
+        object-fit: cover; /* Controla cómo se ajusta la imagen manteniendo su relación de aspecto */
+    }
+    .carousel-container {
+        max-width: 100%; /* Puedes ajustar el tamaño según tus necesidades */
+        margin: auto; /* Centra el carousel horizontalmente */
+    }
 }

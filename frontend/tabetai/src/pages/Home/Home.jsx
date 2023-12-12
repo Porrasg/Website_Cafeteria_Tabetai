@@ -24,10 +24,6 @@ function Home() {
                 <Slogan></Slogan>
             </section>
 
-            <section>
-                <Carousel></Carousel>
-            </section>
-
             {/* <section>
                 <GoogleMaps></GoogleMaps>
             </section> */}
@@ -38,6 +34,10 @@ function Home() {
 
             <section>
             <Schelude></Schelude>
+            </section>
+
+            <section>
+                <Carousel></Carousel>
             </section>
 
             <section>
