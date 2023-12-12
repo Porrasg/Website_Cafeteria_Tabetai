@@ -1,7 +1,7 @@
 class Reservation < ApplicationRecord
     #---Relación que tienen estre tablas---#
     belongs_to :client
-    has_many :rest_tables
+    has_many :rest_tables, dependent: :destroy
 
     # validaciónes de los metodos
 
@@ -28,6 +28,14 @@ class Reservation < ApplicationRecord
         if rest_table
             rest_table.update(status: "reserved", reservation_id: id)
         end
+    end
+
+    def schedule_job
+        # Calcula la fecha y hora programada para el trabajo Resque
+        scheduled_time = self.scheduled_at + 1.minute
+    
+        # Encola el trabajo Resque con la fecha y hora programada
+        Resque.enqueue_at(scheduled_time, CleanupRestTablesJob, self.id)
     end
 
 end

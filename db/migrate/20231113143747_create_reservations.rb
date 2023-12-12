@@ -6,6 +6,7 @@ class CreateReservations < ActiveRecord::Migration[7.0]
       t.datetime :hour
 
       t.references :client, foreign_key: true
+      #  {on_delete: :cascade}
       t.references :rest_tables, foreign_key: true
 
       t.timestamps

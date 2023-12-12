@@ -1,3 +1,5 @@
+require 'resque/server'
+
 Rails.application.routes.draw do
   get 'private/test'
   
@@ -24,4 +26,7 @@ Rails.application.routes.draw do
       resources :admins, only: [:index, :new, :create, :destroy, :edit, :update]
     end
   end
+
+  mount Resque::Server.new, at: '/resque'
+  
 end
