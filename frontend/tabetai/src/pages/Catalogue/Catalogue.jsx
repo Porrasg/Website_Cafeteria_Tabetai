@@ -1,9 +1,10 @@
 import React from 'react'
+import ConfirmationReservation from '../../components/ConfirmationReservation/ConfirmationReservation'
 
 function Catalogue() {
     return (
         <div>
-            <h3>catalogoooooooo</h3>
+            <ConfirmationReservation></ConfirmationReservation>
         </div>
     )
 }
