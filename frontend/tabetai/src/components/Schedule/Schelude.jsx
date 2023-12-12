@@ -1,12 +1,13 @@
 import React from 'react';
 import './Schelude.css';
 import { FaRegClock } from 'react-icons/fa';
-import { FaLocationArrow } from 'react-icons/fa';
-import { FaWaze } from 'react-icons/fa';
+// import Navbar from '../Navbar/Navbar';
 
 function Schelude() {
   return (
     <div>
+      {/* <Navbar></Navbar> */}
+      <br />
       <div className="font">
         <div className="container-wrapper">
           {/* Contenedor de Horario de Atención */}
@@ -20,21 +21,6 @@ function Schelude() {
             <p className='parrafo'>6:00 pm a 7:00 am</p>
             <h3 className='parr3'>DOMINGO</h3>
             <p className='parrafo'>Cerrado</p>
-          </div>
-
-          {/* Contenedor de Dónde Estamos */}
-          <div className="container">
-            <FaLocationArrow size={40} color='white'/>
-            <h1 className='parr'>Dónde Estamos</h1>
-            <p className="country parrafo">Costa Rica, Puntarenas, El Roble</p>
-            <p className="line-after-paragraphh parrafo">
-              Nos puedes encontrar en El Roble, <br />
-              diagonal al restaurante La Cuchara de Gerald
-            </p>
-            <FaWaze size={50} color="white" />
-            <br />
-            <h2 className="waze parr2">Waze</h2>
-            <button className='btn-sch'>Haz clic para abrir app</button>
           </div>
         </div>
       </div>

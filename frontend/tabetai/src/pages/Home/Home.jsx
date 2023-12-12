@@ -1,5 +1,5 @@
 import React from 'react'
-// import './Home.css'
+import './Home.css'
 import Navbar from '../../components/Navbar/Navbar'
 import InfoImg from '../../components/InfoImg/InfoImg'
 import Slogan from '../../components/Slogan/Slogan'
@@ -8,6 +8,8 @@ import Schelude from '../../components/Schedule/Schelude'
 import Menu from '../../components/Menu/Menu'
 import Footer from '../../components/Footer/Footer'
 import Carousel from '../../components/Carousel/Carousel'
+
+import Location from '../../components/Location/Location'
 
 function Home() {
     return (
@@ -32,8 +34,9 @@ function Home() {
             <Menu></Menu>
             </section>
 
-            <section>
-            <Schelude></Schelude>
+            <section className='carts'>
+                <Schelude></Schelude>
+                <Location></Location>
             </section>
 
             <section>

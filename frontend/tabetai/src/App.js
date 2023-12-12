@@ -16,6 +16,7 @@ import Tables from './components/Admins/Tables/Tables';
 import Form_admin from './components/Admins/Form_admin/Form_admin';
 import Menu from './components/Menu/Menu';
 import Schelude from './components/Schedule/Schelude';
+import Location from './components/Location/Location';
 
 function App() {
   const router = createBrowserRouter([
@@ -69,7 +70,7 @@ function App() {
     },
     {
       path: '/ubicacion',
-      element: <Schelude></Schelude>
+      element: <Location></Location>
     },
     {
       path: '/menu',

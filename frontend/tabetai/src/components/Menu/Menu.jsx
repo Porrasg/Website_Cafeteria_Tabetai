@@ -1,10 +1,13 @@
 import React from 'react';
 import './Menu.css';
 import Menuu from '../../img/MinimalistMenu.png';
+// import Navbar from '../Navbar/Navbar';
 
-function Menu({ menuRef }) {
+function Menu() {
   return (
     <div>
+      {/* <Navbar></Navbar> */}
+      <br />
         <div className='tittle_container'>
           <h1>Nuestro Menú</h1>
           <h3>Elige la mejor opción para tu paladar</h3>
