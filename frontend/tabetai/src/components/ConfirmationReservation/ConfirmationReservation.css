@@ -1,63 +1,59 @@
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  .container {
-    width: 400px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-  }
-  
-  h2 {
-    color: #333;
-    text-align: center;
-  }
-  
-  .client_container,
-  .reservation_container {
-    margin-top: 20px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    box-sizing: border-box;
-  }
-  
-  button {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-right: 10px;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  p {
-    margin-bottom: 10px;
-    text-align: center;
-  }
-  
-  .loading {
-    font-style: italic;
-    color: #888;
-    text-align: center;
-  }
-  
+/* Asegúrate de que el nombre del archivo CSS sea el mismo que importaste en tu componente React */
+
+.xyz123 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container-abc {
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+h2 {
+  color: #333;
+  text-align: center;
+}
+
+.client-container-123,
+.reservation-container-123 {
+  margin-top: 20px;
+}
+
+.label-abc {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-abc {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.button-abc {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.button-abc:hover {
+  background-color: #45a049;
+}
+
+.loading-xyz {
+  font-style: italic;
+  color: #888;
+  text-align: center;
+}
