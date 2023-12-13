@@ -17,6 +17,7 @@ import Form_admin from './components/Admins/Form_admin/Form_admin';
 import Menu from './components/Menu/Menu';
 import Schelude from './components/Schedule/Schelude';
 import Location from './components/Location/Location';
+import ConfirmationReservation from './components/ConfirmationReservation/ConfirmationReservation'
 
 function App() {
   const router = createBrowserRouter([
@@ -43,6 +44,10 @@ function App() {
     {
       path: '/reservar',
       element: <AddReservation></AddReservation>
+    },
+    {
+    path: "/confirmacion",
+    element: <ConfirmationReservation></ConfirmationReservation>
     },
     {
       path: '/admin_reservaciones',
