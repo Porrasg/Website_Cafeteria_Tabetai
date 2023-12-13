@@ -8,6 +8,7 @@ import Schelude from '../../components/Schedule/Schelude'
 import Menu from '../../components/Menu/Menu'
 import Footer from '../../components/Footer/Footer'
 import Carousel from '../../components/Carousel/Carousel'
+import BotonWhatsapp from '../../components/BotonWhatsapp/BotonWhatsapp'
 
 import Location from '../../components/Location/Location'
 
@@ -21,6 +22,8 @@ function Home() {
             <section>
                 <InfoImg></InfoImg>
             </section>
+
+          <BotonWhatsapp></BotonWhatsapp>
             
             <section>
                 <Slogan></Slogan>

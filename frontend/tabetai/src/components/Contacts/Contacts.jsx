@@ -30,7 +30,7 @@ function Contacts() {
         </div>
         <div className="contact-info">
           <h2>Vía Whatsapp directo</h2>
-          <a href="https://walink.co/312af0">8863-0527</a>
+          <a href="https://walink.co/312af0" target='blank'>8863-0527</a>
           <br />
           <a href="https://wa.link/mztsoq">8718-4584</a>
         </div>

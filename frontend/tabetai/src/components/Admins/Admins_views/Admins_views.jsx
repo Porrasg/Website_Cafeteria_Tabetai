@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './Admins_views.css'
+import './Admins_view.css'
 
 const Admins_views = () => {
     const [admins, setAdmins] = useState([]);
