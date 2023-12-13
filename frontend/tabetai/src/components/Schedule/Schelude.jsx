@@ -7,12 +7,13 @@ function Schelude() {
   return (
     <div>
       {/* <Navbar></Navbar> */}
+      
+      {/* Contenedor de Horario de Atención */}
       <br />
       <div className="font">
         <div className="container-wrapper">
-          {/* Contenedor de Horario de Atención */}
           <div className="container">
-            <FaRegClock size={50} color='white'/>
+            <FaRegClock size={46} color='white'/>
             <h1 className='parr'>Horario de Atención</h1>
             <h1 className='parr'>Cafeteria Tabetai</h1>
             <h3 className='parr3'>LUNES A JUEVES</h3>

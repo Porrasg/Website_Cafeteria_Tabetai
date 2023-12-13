@@ -1,17 +1,16 @@
-.font {
+.fontt {
     font-family: Arial, sans-serif;
     text-align: center;
     color: rgb(0, 0, 0);
   }
   
-  .container-wrapper {
+  .container-wrapperr {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
   }
   
-  .container {
-    flex: 1;
+  .containerr {
     background-color: #66ccf1;
     border-radius: 10px;
     padding: 20px;
@@ -19,23 +18,18 @@
     max-width: 400px;
   }
   
-  .parr {
+  .parra {
     font-size: 30px;
     font-weight: bold;
   }
   
-  .parr2 {
+  .parra2 {
     font-size: 25px;
     font-weight: bold;
   }
-  
-  .parr3 {
-    font-size: 20px;
-    color: rgb(234, 234, 234);
-    font-weight: bold;
-}
 
-.parrafo {
+
+.parrafoo {
     font-size: 18px;
     font-weight: bold;
 }
@@ -63,9 +57,7 @@
     margin-top: 25px;
 }
 
-.waze {
-    font-size: 30px;
-}
+
 
 .country {
     color: rgb(255, 255, 255);

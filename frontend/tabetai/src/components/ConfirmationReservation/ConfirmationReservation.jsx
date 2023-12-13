@@ -146,11 +146,8 @@ const LatestDataView = () => {
   };
 
   return (
-
-    
     <>
-
-<div>
+      <div>
         <h2>Datos Personales</h2>
         <div className='client_container'>
           {latestClient ? (
@@ -165,10 +162,8 @@ const LatestDataView = () => {
                     value={editingClient.full_name}
                     onChange={(e) => setEditingClient({ ...editingClient, full_name: e.target.value })}
                   />
-
                   <br />
                   <br />
-
                   {/* Agrega más campos según la estructura de tu API */}
                   <label htmlFor='email'>Email: </label>
                   <input
@@ -188,10 +183,8 @@ const LatestDataView = () => {
                     value={editingClient.phone_number}
                     onChange={(e) => setEditingClient({ ...editingClient, phone_number: e.target.value })}
                   />
-
                   <br />
                   <br />
-
                   <button onClick={handleUpdateClient}>Guardar</button>
                   <button onClick={handleCancelEditClient}>Cancelar</button>
                 </>
@@ -229,10 +222,8 @@ const LatestDataView = () => {
                     value={editingReservation.party}
                     onChange={(e) => setEditingReservation({ ...editingReservation, party: e.target.value })}
                   />
-
                   <br />
                   <br />
-
                   {/* Agrega más campos según la estructura de tu API */}
                   <label htmlFor='date'>Fecha:</label>
                   <input
@@ -241,10 +232,8 @@ const LatestDataView = () => {
                     value={editingReservation.date}
                     onChange={(e) => setEditingReservation({ ...editingReservation, date: e.target.value })}
                   />
-
                   <br />
                   <br />
-
                   <label htmlFor='hour'>Hora:</label>
                   <input
                     type='text'
@@ -252,10 +241,8 @@ const LatestDataView = () => {
                     value={editingReservation.hour}
                     onChange={(e) => setEditingReservation({ ...editingReservation, hour: e.target.value })}
                   />
-
                   <br />
                   <br />
-
                   <button onClick={handleUpdateReservation}>Guardar</button>
                   <button onClick={handleCancelEditReservation}>Cancelar</button>
                 </>
@@ -278,8 +265,6 @@ const LatestDataView = () => {
           )}
         </div>
       </div>
-
-      
     </>
   );
 };

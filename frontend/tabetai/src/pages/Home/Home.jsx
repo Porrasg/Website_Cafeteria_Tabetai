@@ -13,7 +13,7 @@ import Location from '../../components/Location/Location'
 
 function Home() {
     return (
-        <div>   
+        <div className='todo'>   
             <header>
                 <Navbar></Navbar>
             </header>       
@@ -50,3 +50,13 @@ function Home() {
     )
 }
 export default Home
+
+// import React from 'react'
+
+// function Home() {
+//   return (
+//     <div>Home</div>
+//   )
+// }
+
+// export default Home
