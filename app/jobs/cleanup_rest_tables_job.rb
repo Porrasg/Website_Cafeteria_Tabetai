@@ -2,10 +2,6 @@ require "resque"
 
 class CleanupRestTablesJob < ApplicationJob
   queue_as :default
-
-  # def self.enqueue_cleanup(reservation_id)
-  #   set(wait: 1.minute).perform_later(reservation_id)
-  # end
   
   def perform
     # Encuentra todos los registros en RestTable donde reservation_id no es nulo
@@ -20,5 +16,3 @@ class CleanupRestTablesJob < ApplicationJob
     Rails.logger.info("#{table_records.count} reservations cleaned up.")
   end
 end
-
-# Resque.enqueue_at(Time.now + 10.seconds, MyJob)

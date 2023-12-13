@@ -26,6 +26,7 @@ function Navbar() {
                             <li><Link to="/menu" className="navbar-link">Menú</Link></li>
                         </ul>
                     </li>
+                    <li><Link to="/" id='nav-cat'>Tabetai</Link></li>
                     <li><Link to="/cliente_reservar" id='nav-cat'>Reservar</Link></li>
                     <li><Link to="/contactos" id='nav-cat'>Contactos</Link></li>
                     <li><Link to="/nosotros" id='nav-cat'>Nosotros</Link></li>
