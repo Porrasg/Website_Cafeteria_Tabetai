@@ -34,7 +34,7 @@ function App() {
       element: <AddClient></AddClient>
     },
     {
-      path: "/catalogo",
+      path: "/contactos",
       element: <Catalogue></Catalogue>
     },
     {

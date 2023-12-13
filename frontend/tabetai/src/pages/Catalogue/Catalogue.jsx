@@ -1,10 +1,12 @@
 import React from 'react'
-import ConfirmationReservation from '../../components/ConfirmationReservation/ConfirmationReservation'
+import Contacts from '../../components/Contacts/Contacts'
+import Navbar from '../../components/Navbar/Navbar'
 
 function Catalogue() {
     return (
         <div>
-            {/* <ConfirmationReservation></ConfirmationReservation> */}
+            <Navbar></Navbar>
+            <Contacts></Contacts>
         </div>
     )
 }

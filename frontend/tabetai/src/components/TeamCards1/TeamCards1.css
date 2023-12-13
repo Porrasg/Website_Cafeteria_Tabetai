@@ -1,4 +1,4 @@
-.mar {
+.mar, .kianny {
   display: inline-block;
   position: relative;
   color: #ffffff;
@@ -8,67 +8,34 @@
   font-weight: 400;
   margin: 2rem 0 0.25rem 0;
   font-size: 40px;
-  margin-left: 20px;
-  font-family:fantasy;
 }
 
-.mar:after {
-  content: "CEO";
+.mar:after, .kianny:after {
+  content: "Developer";
   position: absolute;
   top: -100%;
   left: 0px;
   width: 100%;
-  background:#9bc0ce;
+  background: #9bc0ce;
   transform-origin: left bottom;
   transform: rotateX(90deg);
 }
 
-.mar:hover {
+.mar:hover, .kianny:hover {
   transform-origin: center bottom;
   transform: rotateX(-90deg) translateY(100%);
   color: aliceblue;
 }
 
-.kianny {
-  display: inline-block;
-  position: relative;
-  color: #ffffff;
-  text-decoration: none;
-  transition: all .5s ease;
-  transform-style: preserve-3d;
-  font-weight: 400;
-  margin: 2rem 0 0.25rem 0;
-  font-size: 40px;
-  margin-left: 32px;
-}
-
-.kianny:after {
-  content: "Mesera";
-  position: absolute;
-  top: -100%;
-  left: 0px;
-  width: 100%;
-  background:#9bc0ce;
-  transform-origin: left bottom;
-  transform: rotateX(90deg);
-}
-
-.kianny:hover {
-  transform-origin: center bottom;
-  transform: rotateX(-90deg) translateY(100%);
-}
-
 .figu {
   width: 300px;
   height: 500px;
-  background:#9bc0ce;
+  background: #9bc0ce;
   border-width: 2px;
   position: relative;
   overflow: hidden;
   border-radius: 1.5rem;
 }
-
-
 
 .Foto {
   position: absolute;
@@ -78,7 +45,9 @@
   transition: transform 0.2s;
 }
 
-.conta{
+.conta {
+  display: flex;
   justify-content: center;
-  display: grid;
+  gap: 20px; /* Espacio entre los elementos */
+  flex-wrap: wrap; /* Permite que se envuelvan si no hay suficiente espacio */
 }
