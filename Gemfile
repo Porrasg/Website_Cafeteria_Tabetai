@@ -54,6 +54,8 @@ gem 'byebug'
 gem 'cancancan'
 gem 'kaminari'
 
+gem 'mailtrap'
+
 gem 'resque'
 gem 'resque-scheduler'
 

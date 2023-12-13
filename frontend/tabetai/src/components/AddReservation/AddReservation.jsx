@@ -127,7 +127,7 @@ const AddReservation = () => {
         
         <div className='resback'>
           <Link to="/cliente_reservar" className='registrar atras'>Anterior</Link>
-           <Link to="/confirmación"> <button className='registrar' type="submit">Reservar</button></Link>
+          <Link to="/confirmacion"> <button className='registrar' type="submit">Reservar</button></Link>
           </div>
       </form>
     </>
