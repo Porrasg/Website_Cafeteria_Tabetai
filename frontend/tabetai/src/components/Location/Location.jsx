@@ -9,6 +9,7 @@ function Location() {
             {/* <Navbar></Navbar> */}
             {/* Contenedor de Dónde Estamos */}
             <div className="container">
+                <center>
                 <FaLocationArrow size={40} color='white'/>
                 <h1 className='parr'>Dónde Estamos</h1>
                 <p className="country parrafo">Costa Rica, Puntarenas, El Roble</p>
@@ -20,6 +21,7 @@ function Location() {
                 <br />
                 <h2 className="waze parr2">Waze</h2>
                 <button className='btn-sch'>Haz clic para abrir app</button>
+                </center>
             </div>
         </div>
     )
