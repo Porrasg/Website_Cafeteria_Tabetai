@@ -4,7 +4,7 @@ import ConfirmationReservation from '../../components/ConfirmationReservation/Co
 function Catalogue() {
     return (
         <div>
-            <ConfirmationReservation></ConfirmationReservation>
+            {/* <ConfirmationReservation></ConfirmationReservation> */}
         </div>
     )
 }

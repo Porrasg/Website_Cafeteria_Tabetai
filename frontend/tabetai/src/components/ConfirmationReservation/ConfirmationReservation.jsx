@@ -146,123 +146,154 @@ const LatestDataView = () => {
   };
 
   return (
-    <>
-      <div>
-        <h2>Datos Personales</h2>
-        <div className='client_container'>
-          {latestClient ? (
-            <div>
-              {editingClient ? (
-                // Formulario de edición
-                <>
-                  <label htmlFor='full_name'>Nombre: </label>
-                  <input
-                    type='text'
-                    id='full_name'
-                    value={editingClient.full_name}
-                    onChange={(e) => setEditingClient({ ...editingClient, full_name: e.target.value })}
-                  />
-                  <br />
-                  <br />
-                  {/* Agrega más campos según la estructura de tu API */}
-                  <label htmlFor='email'>Email: </label>
-                  <input
-                    type='text'
-                    id='email'
-                    value={editingClient.email}
-                    onChange={(e) => setEditingClient({ ...editingClient, email: e.target.value })}
-                  />
+<>
+      <div className='xyz123'>
+        <div>
+          <h2>Abc Def</h2>
+          <div className='client-container-123'>
+            {latestClient ? (
+              <div>
+                {editingClient ? (
+                  // Formulario de edición
+                  <>
+                    <label className='label-abc' htmlFor='full_name'>
+                      Nombre:{' '}
+                    </label>
+                    <input
+                      className='input-abc'
+                      type='text'
+                      id='full_name'
+                      value={editingClient.full_name}
+                      onChange={(e) => setEditingClient({ ...editingClient, full_name: e.target.value })}
+                    />
 
-                  <br />
-                  <br />
+                    <br />
+                    <br />
 
-                  <label htmlFor='phone_number'>Telefono: </label>
-                  <input
-                    type='text'
-                    id='phone_number'
-                    value={editingClient.phone_number}
-                    onChange={(e) => setEditingClient({ ...editingClient, phone_number: e.target.value })}
-                  />
-                  <br />
-                  <br />
-                  <button onClick={handleUpdateClient}>Guardar</button>
-                  <button onClick={handleCancelEditClient}>Cancelar</button>
-                </>
-              ) : (
-                // Vista normal del cliente
-                <>
-                  {/* <p>Número de Cliente: {latestClient.id}</p> */}
-                  <p>Nombre: {latestClient.full_name}</p>
-                  <p>Email: {latestClient.email}</p>
-                  <p>Telefono: {latestClient.phone_number}</p>
-                  {/* Agrega más campos según la estructura de tu API */}
-                  {/* <button onClick={handleEditClientClick}>Editar</button>
-                  <button onClick={() => handleDeleteClient(latestClient.id)}>Eliminar</button> */}
-                </>
-              )}
-            </div>
-          ) : (
-            <p>Cargando último cliente...</p>
-          )}
+                    <label className='label-abc' htmlFor='email'>
+                      Email:{' '}
+                    </label>
+                    <input
+                      className='input-abc'
+                      type='text'
+                      id='email'
+                      value={editingClient.email}
+                      onChange={(e) => setEditingClient({ ...editingClient, email: e.target.value })}
+                    />
+
+                    <br />
+                    <br />
+
+                    <label className='label-abc' htmlFor='phone_number'>
+                      Telefono:{' '}
+                    </label>
+                    <input
+                      className='input-abc'
+                      type='text'
+                      id='phone_number'
+                      value={editingClient.phone_number}
+                      onChange={(e) => setEditingClient({ ...editingClient, phone_number: e.target.value })}
+                    />
+
+                    <br />
+                    <br />
+
+                    <button className='button-abc' onClick={handleUpdateClient}>
+                      Guardar
+                    </button>
+                    <button className='button-abc' onClick={handleCancelEditClient}>
+                      Cancelar
+                    </button>
+                  </>
+                ) : (
+                  // Vista normal del cliente
+                  <>
+                    <p>Nombre: {latestClient.full_name}</p>
+                    <p>Email: {latestClient.email}</p>
+                    <p>Telefono: {latestClient.phone_number}</p>
+                  </>
+                )}
+              </div>
+            ) : (
+              <p className='loading-xyz'>Cargando último cliente...</p>
+            )}
+          </div>
         </div>
-      </div>
 
-      <div>
-        <h2>Confirmación de la reservación</h2>
-        <div className='reservation_container'>
-          {latestReservation ? (
-            <div>
-              {editingReservation ? (
-                // Formulario de edición
-                <>
-                  <label htmlFor='party'>Cantidad de personas:</label>
-                  <input
-                    type='text'
-                    id='party'
-                    value={editingReservation.party}
-                    onChange={(e) => setEditingReservation({ ...editingReservation, party: e.target.value })}
-                  />
-                  <br />
-                  <br />
-                  {/* Agrega más campos según la estructura de tu API */}
-                  <label htmlFor='date'>Fecha:</label>
-                  <input
-                    type='text'
-                    id='date'
-                    value={editingReservation.date}
-                    onChange={(e) => setEditingReservation({ ...editingReservation, date: e.target.value })}
-                  />
-                  <br />
-                  <br />
-                  <label htmlFor='hour'>Hora:</label>
-                  <input
-                    type='text'
-                    id='hour'
-                    value={editingReservation.hour}
-                    onChange={(e) => setEditingReservation({ ...editingReservation, hour: e.target.value })}
-                  />
-                  <br />
-                  <br />
-                  <button onClick={handleUpdateReservation}>Guardar</button>
-                  <button onClick={handleCancelEditReservation}>Cancelar</button>
-                </>
-              ) : (
-                // Vista normal
-                <>
-                  <p>Número de Reservación: {latestReservation.id}</p>
-                  <p>Cantidad de personas: {latestReservation.party}</p>
-                  <p>Fecha: {latestReservation.date}</p>
-                  <p>Hora: {latestReservation.hour}</p>
-                  {/* <p>ID del cliente: {latestReservation.client_id}</p> */}
-                  {/* Agrega más campos según la estructura de tu API */}
-                  {/* <button onClick={handleEditReservationClick}>Editar</button> */}
-                  <button onClick={() => handleDeleteReservation(latestReservation.id)}>Eliminar</button>
-                </>
-              )}
-            </div>
-          ) : (
-            <p>Cargando última reservación...</p>
-          )}
+        <div>
+          <h2>Confirmación de la reservación</h2>
+          <div className='reservation-container-123'>
+            {latestReservation ? (
+              <div>
+                {editingReservation ? (
+                  // Formulario de edición
+                  <>
+                    <label className='label-abc' htmlFor='party'>
+                      Cantidad de personas:
+                    </label>
+                    <input
+                      className='input-abc'
+                      type='text'
+                      id='party'
+                      value={editingReservation.party}
+                      onChange={(e) => setEditingReservation({ ...editingReservation, party: e.target.value })}
+                    />
+
+                    <br />
+                    <br />
+
+                    <label className='label-abc' htmlFor='date'>
+                      Fecha:
+                    </label>
+                    <input
+                      className='input-abc'
+                      type='text'
+                      id='date'
+                      value={editingReservation.date}
+                      onChange={(e) => setEditingReservation({ ...editingReservation, date: e.target.value })}
+                    />
+
+                    <br />
+                    <br />
+
+                    <label className='label-abc' htmlFor='hour'>
+                      Hora:
+                    </label>
+                    <input
+                      className='input-abc'
+                      type='text'
+                      id='hour'
+                      value={editingReservation.hour}
+                      onChange={(e) => setEditingReservation({ ...editingReservation, hour: e.target.value })}
+                    />
+
+                    <br />
+                    <br />
+
+                    <button className='button-abc' onClick={handleUpdateReservation}>
+                      Guardar
+                    </button>
+                    <button className='button-abc' onClick={handleCancelEditReservation}>
+                      Cancelar
+                    </button>
+                  </>
+                ) : (
+                  // Vista normal
+                  <>
+                    <p>Número de Reservación: {latestReservation.id}</p>
+                    <p>Cantidad de personas: {latestReservation.party}</p>
+                    <p>Fecha: {latestReservation.date}</p>
+                    <p>Hora: {latestReservation.hour}</p>
+                    <button className='button-abc' onClick={() => handleDeleteReservation(latestReservation.id)}>
+                      Eliminar
+                    </button>
+                  </>
+                )}
+              </div>
+            ) : (
+              <p className='loading-xyz'>Cargando última reservación...</p>
+            )}
+          </div>
         </div>
       </div>
     </>
