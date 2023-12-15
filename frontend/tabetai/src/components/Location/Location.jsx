@@ -10,19 +10,24 @@ function Location() {
             {/* <Navbar></Navbar> */}
 
             {/* Contenedor de Dónde Estamos */}
-            <div className="container">
-                <FaLocationArrow size={40} color='white'/>
-                <h1 className='parr'>Dónde Estamos</h1>
-                <p className="country parrafo">Costa Rica, Puntarenas, El Roble</p>
-                <p className="line-after-paragraphh parrafo">
-                Nos puedes encontrar en El Roble, <br />
-                diagonal al restaurante La Cuchara de Gerald
-                </p>
-                <FaWaze size={50} color="white" />
-                <br />
-                <h2 className="waze parr2">Waze</h2>
-                <button className='btn-sch'>Haz clic para abrir app</button>
+            <br />
+            <div className="fontt">
+                <div className="container-wrapperr">
+                    <div className="container">
+                        <FaLocationArrow size={40} color='white'/>
+                        <h1 className='parr'>Dónde Estamos</h1>
+                        <p className="country parrafoo">Costa Rica, Puntarenas, El Roble</p>
+                        <p className="line-after-paragraphh parrafoo">
+                        Nos puedes encontrar en El Roble, diagonal al restaurante La Cuchara de Gerald
+                        </p>
+                        <FaWaze size={50} color="white" />
+                        <br />
+                        <h2 className="waze parr2">Waze</h2>
+                        <button className='btn-sch'>Haz clic para abrir app</button>
+                    </div>
+                </div>
             </div>
+            
         </div>
     )
 }
