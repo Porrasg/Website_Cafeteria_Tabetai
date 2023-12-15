@@ -4,6 +4,20 @@ class Reservation < ApplicationRecord
     has_many :rest_tables, dependent: :destroy
 
     # validaciónes de los metodos
+    # Validaciones para la columna 'party'
+    validates :party, presence: true, length: { maximum: 255 }
+
+    # Validaciones para la columna 'date'
+    validates :date, presence: true
+
+    # Validaciones para la columna 'hour'
+    validates :hour, presence: true
+
+    # Validaciones para la columna 'client_id'
+    validates :client_id, presence: true
+
+    # Validaciones personalizadas (pueden ser adaptadas según tus necesidades)
+    validate :date_cannot_be_in_the_past
 
     validate :table_is_available, on: :create
 
@@ -27,6 +41,12 @@ class Reservation < ApplicationRecord
         # Actualiza el estado si se encontró un registro
         if rest_table
             rest_table.update(status: "reserved", reservation_id: id)
+        end
+    end
+
+    def date_cannot_be_in_the_past
+        if date.present? && date < Date.today
+            errors.add(:date, "no puede estar en el pasado")
         end
     end
 

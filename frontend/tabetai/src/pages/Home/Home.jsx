@@ -3,7 +3,7 @@ import './Home.css'
 import Navbar from '../../components/Navbar/Navbar'
 import InfoImg from '../../components/InfoImg/InfoImg'
 import Slogan from '../../components/Slogan/Slogan'
-// import GoogleMaps from '../../components/GoogleMaps/GoogleMaps'
+import GoogleMaps from '../../components/GoogleMaps/GoogleMaps'
 import Schelude from '../../components/Schedule/Schelude'
 import Menu from '../../components/Menu/Menu'
 import Footer from '../../components/Footer/Footer'
@@ -29,10 +29,6 @@ function Home() {
                 <Slogan></Slogan>
             </section>
 
-            {/* <section>
-                <GoogleMaps></GoogleMaps>
-            </section> */}
-
             <section>
             <Menu></Menu>
             </section>
@@ -41,6 +37,14 @@ function Home() {
                 <Schelude></Schelude>
                 <Location></Location>
             </section>
+
+            <section>
+                <center>
+                <GoogleMaps></GoogleMaps>
+                </center>
+            </section> 
+            
+            <br />
 
             <section>
                 <Carousel></Carousel>
@@ -53,13 +57,3 @@ function Home() {
     )
 }
 export default Home
-
-// import React from 'react'
-
-// function Home() {
-//   return (
-//     <div>Home</div>
-//   )
-// }
-
-// export default Home

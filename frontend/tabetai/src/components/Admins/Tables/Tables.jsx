@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-
 const Tables = () => {
     const [tables, setTables] = useState([]);
     const [editingTable, setEditingTable] = useState(null);
@@ -165,6 +164,7 @@ const Tables = () => {
                                 <p>Mesa: {table.name_table}</p>
                                 <p>Espacios: {table.spaces}</p>
                                 <p>Estado: {table.status}</p>
+                                <p>Numero de reservación: {table.reservation_id}</p>
                                 {/* Agrega más campos según la estructura de tu API */}
                                 <button onClick={() => handleEditClick(table)}>Editar</button>
                                 <button onClick={() => handleDeleteTable(table.id)}>Eliminar</button>
