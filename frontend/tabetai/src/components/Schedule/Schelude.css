@@ -1,38 +1,41 @@
+/* Schelude.css */
+
 .font {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    color: rgb(0, 0, 0);
-  }
-  .container-wrapper {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .container {
-    background-color: #66ccf1;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px 20px; /* Reducido el margen horizontal a 5px */
-    max-width: 400px;
-  }
-  
-  .parr {
-    font-size: 30px;
-    font-weight: bold;
-  }
-  
-  .parr2 {
-    font-size: 25px;
-    font-weight: bold;
-  }
-  
-  .parr3 {
-    font-size: 24px;
-    color: rgb(234, 234, 234);
-    font-weight: bold;
-  }
-  
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.container-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container {
+  background-color: #66ccf1;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 20px;
+  max-width: 400px;
+}
+
+.parr {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.parr2 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.parr3 {
+  font-size: 24px;
+  color: rgb(234, 234, 234);
+  font-weight: bold;
+}
+
 .parrafo {
   font-size: 22px;
   font-weight: bold;
