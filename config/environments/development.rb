@@ -42,34 +42,13 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-  :user_name => 'aa196a0d772fad',
-  :password => '51167505039605',
-  :address => 'sandbox.smtp.mailtrap.io',
-  :host => 'sandbox.smtp.mailtrap.io',
-  :port => '2525',
-  :authentication => :cram_md5
-}
-
-  # config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.smtp_settings = {
-  #   address:              'live.smtp.mailtrap.io',
-  #   port:                 587,
-  #   domain:               'tabetai.com',
-  #   user_name:            'api',
-  #   password:             '47ad23eaa4d50e509af4b983dc805471',
-  #   authentication:       :cram_md5,
-  #   enable_starttls_auto: true
-  # }
-
-  # config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.smtp_settings = {
-  #   :user_name => 'api',
-  #   :password => '47ad23eaa4d50e509af4b983dc805471',
-  #   :address => 'live.smtp.mailtrap.io',
-  #   :host => 'live.smtp.mailtrap.io',
-  #   :port => '587',
-  #   :authentication => :cram_md5
-  # }
+    :user_name => 'aa196a0d772fad',
+    :password => '51167505039605',
+    :address => 'sandbox.smtp.mailtrap.io',
+    :host => 'sandbox.smtp.mailtrap.io',
+    :port => '2525',
+    :authentication => :cram_md5
+  }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

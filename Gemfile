@@ -55,9 +55,15 @@ gem 'cancancan'
 gem 'kaminari'
 
 gem 'mailtrap'
+# En tu Gemfile
+gem 'mail'
 
 gem 'resque'
 gem 'resque-scheduler'
+
+
+gem 'factory_bot_rails'
+
 
 
 gem 'rack-cors'

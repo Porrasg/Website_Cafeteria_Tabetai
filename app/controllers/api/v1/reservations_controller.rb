@@ -12,6 +12,8 @@ class Api::V1::ReservationsController <ApplicationController
     
     def create
         @reservation= Reservation.new(reservation_params)
+
+        NotifierMailer.new_account(@reservation).deliver_now
     
         if @reservation.save
             render json:   @reservation, status: :created

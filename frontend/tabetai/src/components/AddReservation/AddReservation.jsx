@@ -29,7 +29,7 @@ const AddReservation = () => {
       }
       const data = await response.json();
 
-      console.log('Success DATA RESERVACION:', data);
+      console.log('RESERVAAAAAAAAAA ENVIADA:', data);
       // Establecer el estado para redirigir a /reservar
       // setRedirectToReservar(true);
     } catch (error) {
@@ -42,7 +42,7 @@ const AddReservation = () => {
   //   return <Navigate to="/FinalReservation" />;
   // }
 
-  console.log("HOLAAAAAAAAAAAA",{
+  console.log("MOSTRANDO DATOS",{
     date,
     hour,
     party,
@@ -71,7 +71,7 @@ const AddReservation = () => {
   newDate.setMonth(selectedDate.getMonth());
   newDate.setDate(selectedDate.getDate());
     
-    console.log("Soy la hora",newDate.getHours())
+
     setSelectedDate(newDate);
     setHora(newDate);
 
@@ -127,8 +127,13 @@ const AddReservation = () => {
         
         <div className='resback'>
           <Link to="/cliente_reservar" className='registrar atras'>Anterior</Link>
-          <Link to="/confirmacion"> <button className='registrar' type="submit">Reservar</button></Link>
-          </div>
+          
+          <Link to="/confirmacion" className='registrar'>
+            <button type="submit" onClick={handleSubmit}>
+              Reservar
+            </button>
+          </Link>
+        </div>
       </form>
     </>
   );
