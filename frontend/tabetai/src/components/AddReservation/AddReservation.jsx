@@ -1,82 +1,89 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './AddReservation.css';
-import { Navigate, Link } from 'react-router-dom';  // Agrega esta línea
+import { Navigate, Link } from 'react-router-dom';
 
 const AddReservation = () => {
+  // State variables to manage form data
   const [date, setFecha] = useState('');
   const [hour, setHora] = useState('');
   const [party, setOpcionesDropdown] = useState('');
-  const [redirectToReservar, setRedirectToReservar] = useState(false); // Agregado para manejar la redirección
-  const opciones = ['Selecciona el número de personas', '1 Persona', '2 Personas', '3 Personas', '4 Personas', '5 Personas', '6 Personas'];
-  const [client_id, setClientID] = useState('')
+  const [client_id, setClientID] = useState('');
+  const [redirectToConfirmation, setRedirectToConfirmation] = useState(false);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    // Aquí puedes manejar el envío de los datos, como guardarlos en una base de datos o enviarlos a otra API.
-    try {
-      const response = await fetch('http://localhost:3001/api/v1/reservations', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({reservation: { date, hour, party, client_id} }),
-      }
-      );
-
-      console.log("REESPUESTA SERVER",response)
-      if (!response.ok) {
-        throw new Error('Error: ' + response.statusText);
-      }
-      const data = await response.json();
-
-      console.log('RESERVAAAAAAAAAA ENVIADA:', data);
-      // Establecer el estado para redirigir a /reservar
-      // setRedirectToReservar(true);
-    } catch (error) {
-      console.error('Error:', error);
-    }
-  };
-
-  // if (redirectToReservar) {
-  //   // Redirige a /reservar si redirectToReservar es verdadero
-  //   return <Navigate to="/FinalReservation" />;
-  // }
-
-  console.log("MOSTRANDO DATOS",{
-    date,
-    hour,
-    party,
-    client_id,
-  });
-
+  // Fetch client ID from local storage on component mount
   useEffect(() => {
     const valorID = localStorage.getItem("ReservaId");
     setClientID(valorID || ''); 
   }, []);
 
-  console.log("LOCAL STORAGE",client_id)
-
-
-  const hours = Array.from({ length: 14 }, (_, index) => index + 6); // Crear un array con las horas desde 6:00 hasta 19:00
-  const initialDate = new Date(); // Obtener la fecha actual como punto de partida
-  // initialDate.setHours(6, 0, 0); // Establecer la hora inicial
+  // Array of hours for the time dropdown
+  const hours = Array.from({ length: 14 }, (_, index) => index + 6);
+  const initialDate = new Date();
   const [selectedDate, setSelectedDate] = useState(initialDate);
 
+  // Function to handle hour change in the dropdown
   const handleHourChange = (e) => {
     const selectedHour = parseInt(e.target.value, 10);
     const newDate = new Date(selectedDate);
     newDate.setHours(selectedHour, 0, 0);
 
-     newDate.setFullYear(selectedDate.getFullYear());
-  newDate.setMonth(selectedDate.getMonth());
-  newDate.setDate(selectedDate.getDate());
-    
+    newDate.setFullYear(selectedDate.getFullYear());
+    newDate.setMonth(selectedDate.getMonth());
+    newDate.setDate(selectedDate.getDate());
 
     setSelectedDate(newDate);
     setHora(newDate);
-
   };
 
+  // Function to handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      // Submit reservation data
+      const response = await fetch('http://localhost:3001/api/v1/reservations', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ reservation: { date, hour, party, client_id } }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Error: ' + response.statusText);
+      }
+
+      const data = await response.json();
+      console.log('RESERVAAAAAAA ENVIADA:', data);
+
+      // Send email after confirming the reservation is saved successfully
+      const emailResponse = await fetch('http://localhost:3001/api/v1/reservations/send_email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ reservation: { date, hour, party, client_id } }),
+      });
+
+      if (!emailResponse.ok) {
+        throw new Error('Error al enviar el correo electrónico: ' + emailResponse.statusText);
+      }
+
+      console.log('Correo electrónico enviado con éxito.');
+
+      // Redirect to the confirmation page
+      setRedirectToConfirmation(true);
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
+  // If redirectToConfirmation is true, navigate to the confirmation page
+  if (redirectToConfirmation) {
+    return <Navigate to="/confirmacion" />;
+  }
+
+  // Render the reservation form
   return (
     <>
       <div className='res'>
@@ -84,14 +91,14 @@ const AddReservation = () => {
       </div>
       <form className='form-reser' onSubmit={handleSubmit}>
         <label className='label-reser'>
-          Selecciona una opción:
+          Seleccione una opción:
           <select
             value={party}
             onChange={(e) => setOpcionesDropdown(e.target.value)}
           >
-            {opciones.map((opcion, index) => (
-              <option key={index} value={opcion}>
-                {opcion}
+            {['Selecciona el número de personas', '1 persona', '2 personas', '3 personas', '4 personas', '5 personas', '6 personas'].map((option, index) => (
+              <option key={index} value={option}>
+                {option}
               </option>
             ))}
           </select>
@@ -109,7 +116,6 @@ const AddReservation = () => {
 
         <label className='label-reser'>
           Hora:
-          {/* hacer el cambio en mi selectdate */}
           <select value={selectedDate.getHours()} onChange={handleHourChange}>
             {hours.map((hour) => (
             <option key={hour} value={hour}>
@@ -119,17 +125,16 @@ const AddReservation = () => {
           </select>
         </label>
 
-        <label className='label-client'>
-          client:
+        <label className='label-client-resr'>
+          Cliente:
           <input className='input-client' type="text" value={client_id} onChange={(e) => setClientID(e.target.value)} />
         </label>
-        display none
         
         <div className='resback'>
-          <Link to="/cliente_reservar" className='registrar atras'>Anterior</Link>
+          <Link to="/cliente_reservar" className='registrar antes'>Anterior</Link>
           
-          <Link to="/confirmacion" className='registrar'>
-            <button type="submit" onClick={handleSubmit}>
+          <Link to="/confirmation" className='registrar'>
+            <button className='btn-reservar' type="submit" onClick={handleSubmit}>
               Reservar
             </button>
           </Link>
