@@ -23,7 +23,7 @@ function Home() {
                 <InfoImg></InfoImg>
             </section>
 
-          <BotonWhatsapp></BotonWhatsapp>
+            <BotonWhatsapp></BotonWhatsapp>
             
             <section>
                 <Slogan></Slogan>

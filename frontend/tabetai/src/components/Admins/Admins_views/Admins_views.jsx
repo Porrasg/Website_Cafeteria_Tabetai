@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Admins_view.css';
 
 const Admins_views = () => {
@@ -80,6 +81,7 @@ const Admins_views = () => {
     return (
         <>
             <div>
+            <Link to="/login" >Anterior</Link>
                 <h2>Lista de Administradores</h2>
                 <div className='admin_container'>
                     <ul className='table'>

@@ -53,5 +53,4 @@ RSpec.describe Api::V1::RestTablesController, type: :controller do
     end
   end
 
-  # Add similar examples for other actions like edit, update, etc.
 end

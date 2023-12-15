@@ -19,6 +19,7 @@ import Schelude from './components/Schedule/Schelude';
 import Location from './components/Location/Location';
 import ConfirmationReservation from './components/ConfirmationReservation/ConfirmationReservation'
 import Form_tables from './components/Admins/Form_tables/Form_tables';
+import ViewsAdmin from './components/ViewsAdmin/ViewsAdmin';
 
 function App() {
   const router = createBrowserRouter([
@@ -86,7 +87,7 @@ function App() {
       path: '/menu',
       element: <Menu></Menu>
     },
-
+    
 
     // la pagina de 404 es siempre la ultima.
     {

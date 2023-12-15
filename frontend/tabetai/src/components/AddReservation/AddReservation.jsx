@@ -96,7 +96,7 @@ const AddReservation = () => {
             value={party}
             onChange={(e) => setOpcionesDropdown(e.target.value)}
           >
-            {['Selecciona el número de personas', '1 persona', '2 personas', '3 personas', '4 personas', '5 personas', '6 personas'].map((option, index) => (
+            {['Selecciona el número de personas', '1', '2', '3', '4', '5', '6'].map((option, index) => (
               <option key={index} value={option}>
                 {option}
               </option>

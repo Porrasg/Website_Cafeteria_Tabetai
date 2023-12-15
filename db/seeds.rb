@@ -40,4 +40,5 @@
 # RestTable.where('id >= ?', 15).delete_all
 
 # Client.destroy_all
-
+# rest_table = RestTable.where(spaces: 6, status: "available").first
+# rest_table.update(status: 'nuevo_estado')

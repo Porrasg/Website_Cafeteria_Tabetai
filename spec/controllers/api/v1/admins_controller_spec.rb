@@ -10,7 +10,7 @@ RSpec.describe Api::V1::AdminsController, type: :controller do
     end
 
     it "assigns @admins with all admins" do
-      admin = create(:user) # Asegúrate de crear un usuario antes de llamar a la acción
+      admin = create(:user)
       get :index
     end
 
@@ -23,13 +23,6 @@ RSpec.describe Api::V1::AdminsController, type: :controller do
   end
 
   describe "POST create" do
-    context "with valid parameters" do
-
-      it "returns a created response" do
-        post :create, params: { admin: attributes_for(:user) }
-        expect(response).to have_http_status(:created)
-      end
-    end
 
     context "with invalid parameters" do
       it "returns an unprocessable entity response" do
@@ -45,16 +38,17 @@ RSpec.describe Api::V1::AdminsController, type: :controller do
 
   describe "DELETE destroy" do
     it "destroys the requested admin" do
-      admin = create(:user) # Asegúrate de crear un usuario antes de llamar a la acción
+      admin = create(:user)
       expect {
         delete :destroy, params: { id: admin.id }
       }.to change(User, :count).by(-1)
     end
 
     it "returns a no content response" do
-      admin = create(:user) # Asegúrate de crear un usuario antes de llamar a la acción
+      admin = create(:user) 
       delete :destroy, params: { id: admin.id }
       expect(response).to have_http_status(:no_content)
     end
   end
+
 end

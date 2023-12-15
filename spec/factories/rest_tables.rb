@@ -12,4 +12,13 @@ FactoryBot.define do
       end
     end
   end
+
+#   # spec/factories/rest_tables.rb
+# FactoryBot.define do
+#   factory :rest_table do
+#     spaces { 2 }
+#     status { 'available' }
+#   end
+# end
+
   

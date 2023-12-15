@@ -1,32 +1,32 @@
-# require 'rails_helper'
+# spec/jobs/cleanup_rest_tables_job_spec.rb
+require 'rails_helper'
 
-# RSpec.describe CleanupRestTablesJob, type: :job do
-#   describe '#perform' do
-#     let!(:reserved_table) { create(:rest_table, status: 'reserved', reservation_id: 1) }
-#     let!(:available_table) { create(:rest_table, status: 'available', reservation_id: nil) }
+RSpec.describe CleanupRestTablesJob, type: :job do
+  describe '#perform' do
+    it 'cleans up reservations in RestTable' do
+      # Crear un cliente
+      client = FactoryBot.create(:client)
 
-#     it 'updates reserved tables to available status and clears reservation_id' do
-#       expect(RestTable.count).to eq(2)
+      # Crear un registro de RestTable con reservation_id inicialmente nulo
+      rest_table = RestTable.create(name_table: "name table", spaces: 4, status: "available", reservation_id: nil)
 
-#       expect {
-#         CleanupRestTablesJob.perform_now
-#         reserved_table.reload
-#         available_table.reload
-#       }.to change { reserved_table.status }.from('reserved').to('available')
-#         .and change { reserved_table.reservation_id }.from(1).to(nil)
-#         .and not_change { available_table.status }
-#         .and not_change { available_table.reservation_id }
+      # Crear una reserva con reservation_id no nulo
+      reservation = Reservation.create(party: 4, date: DateTime.now, hour: DateTime.now + 1.hour, client_id: client.id)
 
-#       expect(Rails.logger).to have_received(:info).with("Reservation 1 cleaned up.").once
-#       expect(Rails.logger).to have_received(:info).with("2 reservations cleaned up.").once
-#     end
+      # Asignar el reservation_id de la reserva al RestTable
+      rest_table.update(reservation_id: reservation.id, status: "reserved")
 
-#     it 'logs cleanup information for each table' do
-#       expect {
-#         CleanupRestTablesJob.perform_now
-#       }.to output(/Reservation #{reserved_table.reservation_id} cleaned up./).to_stdout
-#         .and output(/2 reservations cleaned up./).to_stdout
-#     end
-#   end
-# end
+      # Verificar que el RestTable tiene el reservation_id y el estado esperados
+      expect(rest_table.reservation_id).to eq(reservation.id)
+      expect(rest_table.status).to eq("reserved")
 
+      # Ejecutar el job de forma síncrona
+      CleanupRestTablesJob.perform_now
+
+      # Verificar que el RestTable ha sido actualizado correctamente por el job
+      expect(RestTable.find(rest_table.id).reservation_id).to be_nil
+      expect(RestTable.find(rest_table.id).status).to eq("available")
+
+    end
+  end
+end

@@ -1,6 +1,6 @@
 class Api::V1::RestTablesController <ApplicationController
     before_action :set_table, only: [:edit, :update, :destroy]
-
+   
     def index
         @tables = RestTable.all
         render json: @tables

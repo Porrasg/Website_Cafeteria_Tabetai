@@ -9,19 +9,17 @@ class Api::V1::ReservationsController <ApplicationController
     def new
         @reservation = Reservation.new
     end
-    
+
+
     def create
-        @reservation= Reservation.new(reservation_params)
-    
+        @reservation = Reservation.new(reservation_params)
+      
         if @reservation.save
-
-            # NotifierMailer.new_account(@reservation).deliver_now
-
-            render json:   @reservation, status: :created
+          render json: @reservation, status: :created
         else
-            render json:  @reservation.errors, status: :unprocessable_entity
+          render json: { errors: @reservation.errors.full_messages }, status: :unprocessable_entity
         end
-    end
+      end
 
     def destroy
         @reservation.destroy
@@ -44,10 +42,13 @@ class Api::V1::ReservationsController <ApplicationController
     def send_email
         # Lógica para enviar el correo electrónico basado en los parámetros recibidos
         # Obtén el cliente recién creado
+
+  
+        
         client = Client.find(params[:reservation][:client_id])
         
         # Utiliza el mailer que ya has configurado en Rails
-        NotifierMailer.new_account(client.email).deliver_now
+        NotifierMailer.new_account(client.email,client.full_name).deliver_now
         render json: { message: 'Correo electrónico enviado con éxito.' }
     end
 
