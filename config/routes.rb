@@ -27,6 +27,16 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :api do
+    namespace :v1 do
+      resources :reservations do
+        post 'send_email', on: :collection
+      end
+    end
+  end
+  
+  
+
   mount Resque::Server.new, at: '/resque'
   
 end

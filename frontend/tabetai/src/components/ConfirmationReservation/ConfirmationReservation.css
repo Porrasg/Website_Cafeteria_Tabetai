@@ -1,6 +1,6 @@
 
 /* Asegúrate de que el nombre del archivo CSS sea el mismo que importaste en tu componente React */
-
+/* 
 .xyz123 {
   display: flex;
   align-items: center;
@@ -57,4 +57,67 @@ h2 {
   font-style: italic;
   color: #888;
   text-align: center;
+} */
+
+
+.losh1{
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.losh2{
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+}
+.xyz123 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.xyz123 > div {
+  width: 100%; /* Ancho del contenedor ajustado al 100% */
+  margin-bottom: 20px; /* Espacio entre los contenedores */
+}
+
+.label-abc {
+  font-weight: bold;
+}
+
+.input-abc {
+  margin-bottom: 10px;
+}
+
+.button-abc {
+  background-color: rgb(0, 191, 255);
+  border: none;
+  border-radius: 3px;
+  color: white;
+  padding: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.loading-xyz {
+  font-style: italic;
+  color: #888;
+}
+
+.reservation-container-123,
+.client-container-123 {
+  border: 8px solid #ddd;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.reservation-container-123 button,
+.client-container-123 button {
+  margin-top: 10px;
+}
+
+.iniii{
+  margin-left: 2%;
 }

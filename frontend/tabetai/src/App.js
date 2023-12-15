@@ -18,6 +18,7 @@ import Menu from './components/Menu/Menu';
 import Schelude from './components/Schedule/Schelude';
 import Location from './components/Location/Location';
 import ConfirmationReservation from './components/ConfirmationReservation/ConfirmationReservation'
+import Form_tables from './components/Admins/Form_tables/Form_tables';
 
 function App() {
   const router = createBrowserRouter([
@@ -64,6 +65,10 @@ function App() {
     {
       path: '/admins_vistas',
       element: <Admins_views></Admins_views>
+    },
+    {
+      path: '/mesas',
+      element: <Form_tables></Form_tables>
     },
     {
       path: '/admin_mesas',
