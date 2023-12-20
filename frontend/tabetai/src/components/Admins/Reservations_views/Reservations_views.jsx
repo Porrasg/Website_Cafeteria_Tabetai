@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Reservations_views.css';
 
 const ReservationsViews = () => {
@@ -88,9 +89,10 @@ const ReservationsViews = () => {
     return (
         <>
             <div>
-                <h2>Lista de Reservaciones</h2>
+                <Link to="/login" >Anterior</Link>
+                <h2 className='list-reser'>Lista de Reservaciones</h2>
                 <div className='reservation_container'>
-                    <ul>
+                    <ul className='ul-res'>
                         {reservations.map((reservation) => (
                             <li className='each_item' key={reservation.id}>
                                 {editingReservation && editingReservation.id === reservation.id ? (
@@ -153,14 +155,16 @@ const ReservationsViews = () => {
                                     // Vista normal
                                     <>
                                         {/* Campos de visualización */}
-                                        <p>Número de Reservación: {reservation.id}</p>
-                                        <p>Cantidad de personas: {reservation.party}</p>
-                                        <p>Fecha: {reservation.date}</p>
-                                        <p>Hora: {reservation.hour}</p>
-                                        <p>ID del cliente: {reservation.client_id}</p>
+                                        <p className='p-res'>Número de Reservación: {reservation.id}</p>
+                                        <p className='p-res'>Cantidad de personas: {reservation.party}</p>
+                                        <p className='p-res'>Fecha: {reservation.date}</p>
+                                        <p className='p-res'>Hora: {reservation.hour}</p>
+                                        <p className='p-res'>ID del cliente: {reservation.client_id}</p>
                                         {/* Agrega más campos según la estructura de tu API */}
-                                        <button onClick={() => handleEditClick(reservation)}>Editar</button>
-                                        <button onClick={() => handleDeleteReservation(reservation.id)}>Eliminar</button>
+                                        <div className='botones-ediyeli'>
+                                            <button onClick={() => handleEditClick(reservation)}>Editar</button>
+                                            <button onClick={() => handleDeleteReservation(reservation.id)}>Eliminar</button>
+                                        </div>
                                     </>
                                 )}
                             </li>

@@ -7,9 +7,9 @@ class NotifierMailer < ApplicationMailer
             from: 'from@tabetai.com',
             subject: "New account information",
             content_type: "text/html",
-            body: "<html><body><h1>New Account Information</h1><p>Hola #{fullname},</p><p>
+            body: "<html><body><h1>Nueva Reservación</h1><p>Hola #{fullname},</p><p>
             Muchas gracias por haber creado una reserva con nosotros.</p><p>Estamos entusiasmados de verte acá!</p>
-            <p>Muchos saludos,</p><p>The Tabetai Team</p><p>Email #{recipient},</p></body></html>"
+            <p>Muchos saludos,</p><p>The Tabetai Team</p><p>Email #{recipient}.</p></body></html>"
         )
     end
 end

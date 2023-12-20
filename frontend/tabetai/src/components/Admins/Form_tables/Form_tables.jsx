@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './Form_tables.css';
 
 function Form_tables() {
     const [formData, setFormData] = useState({
@@ -44,48 +46,54 @@ function Form_tables() {
     return (
         <>
         <div>
-            <h2>Agregar Nuevas Mesas</h2>
-            <form onSubmit={handleSubmit}>
-            <label htmlFor="name_table">Nombre de la tabla:</label>
-            <input
-                type="text"
-                id="name_table"
-                name="name_table"
-                value={formData.name_table}
-                onChange={handleChange}
-                required
-            />
-            <br />
+            <Link to="/login" >Anterior</Link>
+            <h2 className='mesass'>Agregar Nuevas Mesas</h2>
+            <div className='container_form'>
+                <div className='addmesa'>
+                    <form className="form-tab"  onSubmit={handleSubmit}>
+                        <label htmlFor="name_table">Nombre de la Mesa:</label>
+                        <input
+                            type="text"
+                            id="name_table"
+                            name="name_table"
+                            value={formData.name_table}
+                            onChange={handleChange}
+                            required
+                        />
+                        <br />
 
-            <label htmlFor="spaces">Espacios:</label>
-            <input
-                type="number"
-                id="spaces"
-                name="spaces"
-                value={formData.spaces}
-                onChange={handleChange}
-                required
-            />
-            <br />
+                        <label htmlFor="spaces">Espacios:</label>
+                        <input
+                            type="number"
+                            id="spaces"
+                            name="spaces"
+                            value={formData.spaces}
+                            onChange={handleChange}
+                            required
+                        />
+                        <br />
 
-            <label htmlFor="status">Estado:</label>
-            <select
-                id="status"
-                name="status"
-                value={formData.status}
-                onChange={handleChange}
-                required
-            >
-                <option value="available">available</option>
-                <option value="reserved">reserved</option>
-            </select>
-            <br />
+                        <label htmlFor="status">Estado:</label>
+                        <select
+                            id="status"
+                            name="status"
+                            value={formData.status}
+                            onChange={handleChange}
+                            required
+                        >
+                            <option value="available">available</option>
+                            <option value="reserved">reserved</option>
+                        </select>
+                        <br />
 
-            <input type="submit" value="Enviar" />
-            </form>
-            <a href="/admin_mesas" className="boton_admins">
-            Ver todas las mesas
-            </a>
+                        <input className='enviar' type="submit" value="Enviar" />
+                    </form>
+                    <a href="/admin_mesas" className="boton_admins">
+                    Ver todas las mesas
+                    </a>
+                </div>
+            </div>
+            
         </div>
         </>
     );

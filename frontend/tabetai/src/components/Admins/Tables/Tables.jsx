@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import './Tables.css';
 
 const Tables = () => {
     const [tables, setTables] = useState([]);
@@ -79,9 +81,10 @@ const Tables = () => {
     return (
         <>
             <div>
-                <h2>Lista de Mesas</h2>
+                <Link to="/mesas" >Anterior</Link>
+                <h2 className='list-tab'>Lista de Mesas</h2>
                 <div className='tables_container'>
-                    <ul>
+                    <ul className='ul-tab'>
                         {tables.map((table) => (
                         <li className='each_item' key={table.id}>
                             {editingTable && editingTable.id === table.id ? (
@@ -160,14 +163,16 @@ const Tables = () => {
                             ) : (
                             // Vista normal
                             <>
-                                <p>Número de Mesa: {table.id}</p>
-                                <p>Mesa: {table.name_table}</p>
-                                <p>Espacios: {table.spaces}</p>
-                                <p>Estado: {table.status}</p>
-                                <p>Numero de reservación: {table.reservation_id}</p>
+                                <p className='p-tab'>Número de Mesa: {table.id}</p>
+                                <p className='p-tab'>Mesa: {table.name_table}</p>
+                                <p className='p-tab'>Espacios: {table.spaces}</p>
+                                <p className='p-tab'>Estado: {table.status}</p>
+                                <p className='p-tab'>Numero de reservación: {table.reservation_id}</p>
                                 {/* Agrega más campos según la estructura de tu API */}
-                                <button onClick={() => handleEditClick(table)}>Editar</button>
-                                <button onClick={() => handleDeleteTable(table.id)}>Eliminar</button>
+                                <div className='botones-ediyeli'>
+                                    <button onClick={() => handleEditClick(table)}>Editar</button>
+                                    <button onClick={() => handleDeleteTable(table.id)}>Eliminar</button>
+                                </div>
                             </>
                             )}
                         </li>

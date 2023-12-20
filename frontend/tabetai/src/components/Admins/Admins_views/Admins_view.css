@@ -1,45 +1,67 @@
-.admin_container {
-    max-width: 800px;
-    margin: 0 auto;
+.list-admins{
+    display: flex;
+    justify-content: center;
+}
+
+.ul-table{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .each_item {
-    list-style-type: none;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-    padding: 10px;
+    width: 85%;
+    list-style: none;
+    background-color: #2288bb;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: box-shadow 0.3s ease-in-out;
+    margin-bottom: 2%;
 }
 
-.table {
-    width: 100%;
-    border-collapse: collapse;
+.each_item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.696);
 }
 
-.table th, .table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
 
-.table th {
-    background-color: #f2f2f2;
-}
-
-.table tr:hover {
-    background-color: #f5f5f5;
-}
-
-.button_container {
+.botones-ediyeli{
     display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
+    justify-content: space-around;
 }
 
-.button_container button {
-    padding: 5px 10px;
+.botones-ediyeli {
+    display: flex;
+    gap: 10px;
+}
+
+.botones-ediyeli button {
+    padding: 10px 15px;
+    background-color: #ffffff; /* Color de fondo verde */
+    color: #000000; /* Color del texto blanco */
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.button_container button.cancel {
-    background-color: #ccc;
+.botones-ediyeli button:hover {
+    background-color: #b7def1; /* Cambiar el color de fondo al pasar el ratón */
+}
+
+
+
+@media (max-width: 767px) {
+    .ul-table{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+    .list-admins{
+        display: flex;
+        justify-content: center;
+        margin-top: 2%;
+    }
+    .each_item {
+        width: 92%;
+    }
 }

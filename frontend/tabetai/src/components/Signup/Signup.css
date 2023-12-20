@@ -1,0 +1,47 @@
+.addAdmin{
+    display: flex;
+    justify-content: center;
+}
+
+.container_form{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.addadminn{
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5.5px );
+    -webkit-backdrop-filter: blur( 5.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2%;
+    padding: 30px;
+}
+
+
+.boton_admins{
+    text-decoration: none; /* Quitar subrayado */
+    color: inherit; /* Usar el color predeterminado del texto */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el enlace */
+    color: blue;
+}
+
+.enviar{
+    background-color: blue;
+}
+.form-admin {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}

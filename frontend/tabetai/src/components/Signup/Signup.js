@@ -1,4 +1,6 @@
 import { useRef } from "react"
+import './Signup.css';
+
 const Signup=({setCurrUser, setShow})=>{
     const formRef = useRef()
     const signup=async (userInfo, setCurrUser)=>{
@@ -33,17 +35,23 @@ const Signup=({setCurrUser, setShow})=>{
     
     return(
         <div>
-        <form ref={formRef} onSubmit={handleSubmit}>
-            Email: <input type="email" name='email' placeholder="email" />
-            <br/>
-            Password: <input type="password" name='password' placeholder="password" />
-            <br/>
-            Name: <input type="name" name='name' placeholder="name" />
-            <br/>
-            <input type='submit' value="Submit" />
-        </form>
-        <br />
-    </div>
+            <div className='container_form'>
+                <div className='addadminn'>
+                    <form className="form-admin" ref={formRef} onSubmit={handleSubmit}>
+                        Email: <input type="email" name='email'/>
+                        <br/>
+                        Password: <input type="password" name='password'/>
+                        <br/>
+                        Name: <input type="name" name='name'/>
+                        <br/>
+                        <input className="enviar" type='submit' value="Submit" />
+                    </form>
+                    <div>
+                        <a href="/admins_vistas" className="boton_admins">Ver todos los administradores</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }
 export default Signup

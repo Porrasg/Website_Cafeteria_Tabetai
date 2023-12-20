@@ -81,16 +81,10 @@ const Admins_views = () => {
     return (
         <>
             <div>
-            <Link to="/login" >Anterior</Link>
-                <h2>Lista de Administradores</h2>
+                <Link to="/admins" >Anterior</Link>
+                <h2 className='list-admins'>Lista de Administradores</h2>
                 <div className='admin_container'>
-                    <ul className='table'>
-                        <li className='table-header'>
-                            <span>Nombre</span>
-                            <span>Email</span>
-                            <span>Creado</span>
-                            <span>Acciones</span>
-                        </li>
+                    <ul className='ul-table'>
                         {admins.map((admin) => (
                             <li className='each_item' key={admin.id}>
                                 {editingAdmin && editingAdmin.id === admin.id ? (
@@ -134,17 +128,17 @@ const Admins_views = () => {
                                 ) : (
                                     // Vista normal
                                     <>
-                                        <span>{admin.name}</span>
-                                        <span>{admin.email}</span>
-                                        <span>{admin.created_at}</span>
-                                        <span>
+                                        <p className='p-admin'>Nombre: {admin.name}</p>
+                                        <p className='p-admin'>Email: {admin.email}</p>
+                                        <p className='p-admin'>Creado: {admin.created_at}</p>
+                                        <div className='botones-ediyeli'>
                                             <button onClick={() => handleEditClick(admin)}>
                                                 Editar
                                             </button>
                                             <button onClick={() => handleDeleteAdmin(admin.id)}>
                                                 Eliminar
                                             </button>
-                                        </span>
+                                        </div>
                                     </>
                                 )}
                             </li>

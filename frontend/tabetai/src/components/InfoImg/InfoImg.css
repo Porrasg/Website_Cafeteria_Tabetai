@@ -1,7 +1,7 @@
 
 .buttons {
     position: absolute;
-    bottom: 250px; /* Ajustado para que no esté tan cerca del borde inferior */
+    bottom: 210px; /* Ajustado para que no esté tan cerca del borde inferior */
     left: 50%;
     transform: translateX(-50%);
     
@@ -13,7 +13,7 @@
 
 .tresbuttons{
     display: flex;
-    gap: 100px;
+    gap: 65px;
     flex-direction: row;
 }
 

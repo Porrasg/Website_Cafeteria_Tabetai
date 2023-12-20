@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Clients_views.css';
 
 const ClientsViews = () => {
@@ -85,9 +86,10 @@ const ClientsViews = () => {
     return (
         <>
             <div>
-                <h2>Lista de Clientes</h2>
+                <Link to="/login" >Anterior</Link>
+                <h2 className='list-client'>Lista de Clientes</h2>
                 <div className='client_container'>
-                    <ul>
+                    <ul className='ul-client'>
                         {clients.map((client) => (
                             <li className='each_item' key={client.id}>
                                 {editingClient && editingClient.id === client.id ? (
@@ -150,13 +152,16 @@ const ClientsViews = () => {
                                 ) : (
                                     // Vista normal
                                     <>
-                                        <p>Número de Cliente: {client.id}</p>
-                                        <p>Nombre: {client.full_name}</p>
-                                        <p>Email: {client.email}</p>
-                                        <p>Telefono: {client.phone_number}</p>
+                                        <p className='p-client'>Número de Cliente: {client.id}</p>
+                                        <p className='p-client'>Nombre: {client.full_name}</p>
+                                        <p className='p-client'>Email: {client.email}</p>
+                                        <p className='p-client'>Telefono: {client.phone_number}</p>
                                         {/* Agrega más campos según la estructura de tu API */}
-                                        <button onClick={() => handleEditClick(client)}>Editar</button>
-                                        <button onClick={() => handleDeleteClient(client.id)}>Eliminar</button>
+                                        <div className='botones-ediyeli'>
+                                            <button onClick={() => handleEditClick(client)}>Editar</button>
+                                            <button onClick={() => handleDeleteClient(client.id)}>Eliminar</button>
+                                        </div>
+                                        
                                     </>
                                 )}
                             </li>

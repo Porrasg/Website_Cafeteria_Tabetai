@@ -21,38 +21,44 @@ const InfoImg = () => {
                         </button>
                     </Link>
                     <div className='tresbuttons' >
-                        <button className='button-inicio'>
-                            <div className='schedule'>
-                                <span className='icons'>
-                                    <BiAlarm />
-                                </span>
-                                <br />
-                                <span>Horario</span>
-                                <p>Conoce nuestros horarios</p>
-                            </div>
-                        </button>
+                        <a href='/horario'>
+                            <button className='button-inicio'>
+                                <div className='schedule'>
+                                    <span className='icons'>
+                                        <BiAlarm />
+                                    </span>
+                                    <br />
+                                    <span>Horario</span>
+                                    <p>Conoce nuestros horarios</p>
+                                </div>
+                            </button>
+                        </a>
 
-                        <button className='button-inicio'>
-                            <div className='menu'>
-                                <span className='icons'>
-                                    <BiFoodMenu />
-                                </span>
-                                <br />
-                                <span>Menú</span>
-                                <p>Date una idea de qué pedir</p>
-                            </div>
-                        </button>
+                        <a href='/menu'>
+                            <button className='button-inicio'>
+                                <div className='menu'>
+                                    <span className='icons'>
+                                        <BiFoodMenu />
+                                    </span>
+                                    <br />
+                                    <span>Menú</span>
+                                    <p>Date una idea de qué pedir</p>
+                                </div>
+                            </button>
+                        </a>
 
-                        <button className='button-inicio'>
-                            <div className='location'>
-                                <span className='icons'>
-                                    <LiaMapMarkedAltSolid />
-                                </span>
-                                <br />
-                                <span>Ubicación</span>
-                                <p>¿Sabes dónde nos ubicados?</p>
-                            </div>
-                        </button>
+                        <a href='/ubicacion'>
+                            <button className='button-inicio'>
+                                <div className='location'>
+                                    <span className='icons'>
+                                        <LiaMapMarkedAltSolid />
+                                    </span>
+                                    <br />
+                                    <span>Ubicación</span>
+                                    <p>¿Sabes dónde nos ubicados?</p>
+                                </div>
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>

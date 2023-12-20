@@ -13,7 +13,7 @@ function Location() {
             <br />
             <div className="fontt">
                 <div className="container-wrapperr">
-                    <div className="container">
+                    <div className="containerr">
                         <FaLocationArrow size={40} color='white'/>
                         <h1 className='parr'>Dónde Estamos</h1>
                         <p className="country parrafoo">Costa Rica, Puntarenas, El Roble</p>
